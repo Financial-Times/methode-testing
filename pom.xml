@@ -21,6 +21,11 @@
             <version>15.0</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>com.ft.methode-api</groupId>
+            <artifactId>methode-api-model</artifactId>
+            <version>0.1.192</version>
+        </dependency>
     </dependencies>
 
 </project>
