@@ -1,0 +1,448 @@
+Text Formatting
+
+This is an example of bold text : This text is bold
+
+This is an example of italic text : This text is italic
+
+Links
+
+This is a link for an FT article that has been cut and paste from a browser: http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html.
+This link was added using Right-click, Insert Hyperlink: A story about something financial
+
+This link was added using drag and drop of an article: A story about something financial that was dragged and dropped
+
+This link was added by cutting and pasing a URL of a valid FT article: http://www.ft.com/cms/s/2/f3b60ad0-acda-11e2-a7c4-002128161462.html
+
+This link was added by cutting and pasting a URL from the BBC: http://www.bbc.co.uk/news/world-africa-24577711
+
+Lists
+
+The following is a bulleted list:
+Item 1
+Item 2
+Item 3
+
+Some Typical Body Text
+
+The UK government has struck a deal with the French utility EDF to build the country’s first new nuclear plant in a generation.
+The agreement was reached after the government guaranteed a price of £92.50 per megawatt hour for electricity produced at Hinkley Point C in Somerset. The “strike price”, fully indexed to consumer price inflation, is roughly double the current price of power.
+It forms the centrepiece of a long-awaited deal between the government and EDF and paves the way for the construction of the £16bn power station which, when completed in 2023, will provide 7 per cent of the UK’s electricity.
+Prime minister David Cameron welcomed the deal, saying it would create 25,000 jobs and that it marked “the next generation of nuclear power in Britain, which has an important part to play in contributing to our future energy needs and our longer term security of supply’’.
+Methode Special Characters
+
+Bullets
+
+• Text wtih an inserted Bullet Character
+■ Text with an inserted Black Square Character
+Spaces and hyphens
+
+Text separated by a normal keyboard-hyphen
+Text separated by an Em dash: apple—banana
+Text separated by an En dash: apple–banana
+Two words separated by an Em space: apple banana
+Two words separated by an En space: apple banana
+Two words separated by a Thin space: apple banana
+Two words separated by a Hair space: apple banana
+Two words separated by a Figure space: apple banana
+Two words separated by a Punctuation space: apple banana
+Two words separated by a Non-breaking space: apple banana
+Strike Out Text
+
+The text between this sentence and the one after (starting “Apple”) is struck out and hidden from all channels. All of the text in this sentence is struck out.Apple shares rocketed today on news of the forthcoming iWatch.
+The next entire paragraph is struck out and hidden from all channels:
+This is a struck out paragraph. It should not be seen by end-users.
+The text between this sentence and the one after (starting “Microsoft”) is struck out and restricted to only the Ft.com channel. This text is struck out and hidden from the newspaper channel, but should be visible for web. Microsoft showcased their new range of Surface tablet devices in New York today.
+The next entire paragraph is struck out and hidden from the newspaper channel:
+This whole paragraph is struck out and hidden from the newspaper channel, but should be visible to web users.
+The next entire paragraph is struck out and restricted to only the newspaper channel and should not be seen by web users:
+
+This text should not be seen by web users.
+Company Data
+
+This is an example of company share data displayed on hover. Google released their third quarter results today on the back of record smartphone sales.
+Tables
+
+Table added using Insert > Table
+
+Header A
+
+Header B
+
+Header C
+
+
+
+Column A Row 1
+Column B Row 1
+Column C Row 1
+
+Column A Row 2
+Column B Row 2
+Column C Row 2
+
+
+
+Table added using Insert > Component
+
+
+Table (Falcon Style)
+Column A
+Column B
+Column C
+Column D
+
+
+0
+1
+2
+3
+
+4
+5
+6
+7
+
+
+
+
+
+
+Currency Characters
+
+Sterling: £
+Dollar: $
+Yen: ¥
+Euro: €
+
+Pull Quotes
+
+&lt;Think left and think right and think low and think high. Oh, the thinks you can think up if only you try!
+
+
+
+Dr. Seuss
+
+
+&gt;
+
+
+
+
+
+
+
+
+
+The UK government has struck a deal with the French utility EDF to build the country’s first new nuclear plant in a generation.
+The agreement was reached after the government guaranteed a price of £92.50 per megawatt hour for electricity produced at Hinkley Point C in Somerset. The “strike price”, fully indexed to consumer price inflation, is roughly double the current price of power.
+It forms the centrepiece of a long-awaited deal between the government and EDF and paves the way for the construction of the £16bn power station which, when completed in 2023, will provide 7 per cent of the UK’s electricity.
+
+&lt;Interactive graphic
+
+
+
+Obama’s inner circle
+
+
+
+
+
+
+
+Find out more about the people whom Barack Obama considers his “brain trust”.
+
+
+
+&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+Typical Body Text With Promo Box
+
+Prime minister David Cameron welcomed the deal, saying it would create 25,000 jobs and that it marked “the next generation of nuclear power in Britain, which has an important part to play in contributing to our future energy needs and our longer term security of supply’’.
+Images
+
+
+
+
+
+
+
+The first image is a GIF, the second a JPEG. Text should wrap around inline images, so the following is some typical body text.
+The UK government has struck a deal with the French utility EDF to build the country’s first new nuclear plant in a generation.
+The agreement was reached after the government guaranteed a price of £92.50 per megawatt hour for electricity produced at Hinkley Point C in Somerset. The “strike price”, fully indexed to consumer price inflation, is roughly double the current price of power.
+It forms the centrepiece of a long-awaited deal between the government and EDF and paves the way for the construction of the £16bn power station which, when completed in 2023, will provide 7 per cent of the UK’s electricity.
+
+Embedded Slideshow
+
+One typical, bog-standard slideshow headline update 2
+
+
+
+Flash
+
+
+
+
+Special Characters List
+
+Space (   )
+Exclamation mark ( ! )
+Double quotes (or speech marks) ( “ )
+Number ( # )
+Dollar ( $ )
+Procenttecken ( % )
+Ampersand ( &amp; )
+Single quote ( ‘ )
+Open parenthesis (or open bracket) ( ( )
+Close parenthesis (or close bracket) ( ) )
+Asterisk ( * )
+Plus ( + )
+Comma ( , )
+Hyphen ( - )
+Period, dot or full stop ( . )
+Slash or divide ( / )
+Zero ( 0 )
+One ( 1 )
+Two ( 2 )
+Three ( 3 )
+Four ( 4 )
+Five ( 5 )
+Six ( 6 )
+Seven ( 7 )
+Eight ( 8 )
+Nine ( 9 )
+Colon ( : )
+Semicolon ( ; )
+Less than (or open angled bracket) ( &lt; )
+Equals ( = )
+Greater than (or close angled bracket) ( > )
+Question mark ( ? )
+At symbol ( @ )
+Uppercase A ( A )
+Uppercase B ( B )
+Uppercase C ( C )
+Uppercase D ( D )
+Uppercase E ( E )
+Uppercase F ( F )
+Uppercase G ( G )
+Uppercase H ( H )
+Uppercase I ( I )
+Uppercase J ( J )
+Uppercase K ( K )
+Uppercase L ( L )
+Uppercase M ( M )
+Uppercase N ( N )
+Uppercase O ( O )
+Uppercase P ( P )
+Uppercase Q ( Q )
+Uppercase R ( R )
+Uppercase S ( S )
+Uppercase T ( T )
+Uppercase U ( U )
+Uppercase V ( V )
+Uppercase W ( W )
+Uppercase X ( X )
+Uppercase Y ( Y )
+Uppercase Z ( Z )
+Opening bracket ( [ )
+Backslash ( \ )
+Closing bracket ( ] )
+Caret - circumflex ( ^ )
+Underscore ( _ )
+Grave accent ( ` )
+Lowercase a ( a )
+Lowercase b ( b )
+Lowercase c ( c )
+Lowercase d ( d )
+Lowercase e ( e )
+Lowercase f ( f )
+Lowercase g ( g )
+Lowercase h ( h )
+Lowercase i ( i )
+Lowercase j ( j )
+Lowercase k ( k )
+Lowercase l ( l )
+Lowercase m ( m )
+Lowercase n ( n )
+Lowercase o ( o )
+Lowercase p ( p )
+Lowercase q ( q )
+Lowercase r ( r )
+Lowercase s ( s )
+Lowercase t ( t )
+Lowercase u ( u )
+Lowercase v ( v )
+Lowercase w ( w )
+Lowercase x ( x )
+Lowercase y ( y )
+Lowercase z ( z )
+Opening brace ( { )
+Vertical bar ( | )
+Closing brace ( } )
+Equivalency sign - tilde ( ~ )
+Delete ( )
+Euro sign ( € )
+Single low-9 quotation mark ( ‚ )
+Latin small letter f with hook ( ƒ )
+Double low-9 quotation mark ( „ )
+Horizontal ellipsis ( … )
+Dagger ( † )
+Double dagger ( ‡ )
+Modifier letter circumflex accent ( ˆ )
+Per mille sign ( ‰ )
+Latin capital letter S with caron ( Š )
+Single left-pointing angle quotation ( ‹ )
+Latin capital ligature OE ( Œ )
+Latin captial letter Z with caron ( Ž )
+Left single quotation mark ( ‘ )
+Right single quotation mark ( ’ )
+Left double quotation mark ( “ )
+Right double quotation mark ( ” )
+Bullet ( • )
+En dash ( – )
+Em dash ( — )
+Small tilde ( ˜ )
+Trade mark sign ( ™ )
+Latin small letter S with caron ( š )
+Single right-pointing angle quotation mark ( › )
+Latin small ligature oe ( œ )
+Latin small letter z with caron ( ž )
+Latin capital letter Y with diaeresis ( Ÿ )
+Non-breaking space (   )
+Inverted exclamation mark ( ¡ )
+Cent sign ( ¢ )
+Pound sign ( £ )
+Currency sign ( ¤ )
+Yen sign ( ¥ )
+Pipe, Broken vertical bar ( ¦ )
+Section sign ( § )
+Spacing diaeresis - umlaut ( ¨ )
+Copyright sign ( © )
+Feminine ordinal indicator ( ª )
+Left double angle quotes ( « )
+Not sign ( ¬ )
+Soft hyphen ( )
+Registered trade mark sign ( ® )
+Spacing macron - overline ( ¯ )
+Degree sign ( ° )
+Plus-or-minus sign ( ± )
+Superscript two - squared ( ² )
+Superscript three - cubed ( ³ )
+Acute accent - spacing acute ( ´ )
+Micro sign ( µ )
+Pilcrow sign - paragraph sign ( ¶ )
+Middle dot - Georgian comma ( · )
+Spacing cedilla ( ¸ )
+Superscript one ( ¹ )
+Masculine ordinal indicator ( º )
+Right double angle quotes ( » )
+Fraction one quarter ( ¼ )
+Fraction one half ( ½ )
+Fraction three quarters ( ¾ )
+Inverted question mark ( ¿ )
+Latin capital letter A with grave ( À )
+Latin capital letter A with acute ( Á )
+Latin capital letter A with circumflex ( Â )
+Latin capital letter A with tilde ( Ã )
+Latin capital letter A with diaeresis ( Ä )
+Latin capital letter A with ring above ( Å )
+Latin capital letter AE ( Æ )
+Latin capital letter C with cedilla ( Ç )
+Latin capital letter E with grave ( È )
+Latin capital letter E with acute ( É )
+Latin capital letter E with circumflex ( Ê )
+Latin capital letter E with diaeresis ( Ë )
+Latin capital letter I with grave ( Ì )
+Latin capital letter I with acute ( Í )
+Latin capital letter I with circumflex ( Î )
+Latin capital letter I with diaeresis ( Ï )
+Latin capital letter ETH ( Ð )
+Latin capital letter N with tilde ( Ñ )
+Latin capital letter O with grave ( Ò )
+Latin capital letter O with acute ( Ó )
+Latin capital letter O with circumflex ( Ô )
+Latin capital letter O with tilde ( Õ )
+Latin capital letter O with diaeresis ( Ö )
+Multiplication sign ( × )
+Latin capital letter O with slash ( Ø )
+Latin capital letter U with grave ( Ù )
+Latin capital letter U with acute ( Ú )
+Latin capital letter U with circumflex ( Û )
+Latin capital letter U with diaeresis ( Ü )
+Latin capital letter Y with acute ( Ý )
+Latin capital letter THORN ( Þ )
+Latin small letter sharp s - ess-zed ( ß )
+Latin small letter a with grave ( à )
+Latin small letter a with acute ( á )
+Latin small letter a with circumflex ( â )
+Latin small letter a with tilde ( ã )
+Latin small letter a with diaeresis ( ä )
+Latin small letter a with ring above ( å )
+Latin small letter ae ( æ )
+Latin small letter c with cedilla ( ç )
+Latin small letter e with grave ( è )
+Latin small letter e with acute ( é )
+Latin small letter e with circumflex ( ê )
+Latin small letter e with diaeresis ( ë )
+Latin small letter i with grave ( ì )
+Latin small letter i with acute ( í )
+Latin small letter i with circumflex ( î )
+Latin small letter i with diaeresis ( ï )
+Latin small letter eth ( ð )
+Latin small letter n with tilde ( ñ )
+Latin small letter o with grave ( ò )
+Latin small letter o with acute ( ó )
+Latin small letter o with circumflex ( ô )
+Latin small letter o with tilde ( õ )
+Latin small letter o with diaeresis ( ö )
+Division sign ( ÷ )
+Latin small letter o with slash ( ø )
+Latin small letter u with grave ( ù )
+Latin small letter u with acute ( ú )
+Latin small letter u with circumflex ( û )
+Latin small letter u with diaeresis ( ü )
+Latin small letter y with acute ( ý )
+Latin small letter thorn ( þ )
+Latin small letter y with diaeresis ( ÿ )
+END OF LIST
+-- Paragraphs --
+
+This is a paragraph.
+This is another paragraph.
+This paragraph contains a nested This is the nested paragraph. paragraph.
+The next paragraph is empty.
+The previous paragraph is empty.
+Paragraph tag with title and onclick attributes
+Text separated by line break 1 Text separated by line break 2
+Heading 1
+Heading 2
+Heading 3
+Heading 4
+Heading 5
+Heading 6
+Ordered List Item 1
+Item 2
+Item 3
+
+Unordered List  Item 1
+Item 2
+Item 3
+
+Strong With Title Attribute
+-- Self Closing hr Tag --
+
+
+-- Content Within Unwanted Tags --
+
+Script Tag:
