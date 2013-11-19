@@ -14,6 +14,7 @@ public class ReferenceArticles {
 
     private static final String exampleArticleXmlTemplate = readFromFile("ArticleWithEverything.xml");
     private static final String exampleAttributesXml = readFromFile("ArticleWithEverythingAttributes.xml");
+    private static final String expectedTransformedXml = readFromFile("expectedTransformedBody.txt");
 
     public static MethodeArticle.Builder publishedKitchenSinkArticle() {
         return MethodeArticle.builder(exampleArticleXmlTemplate, exampleAttributesXml).published();
@@ -24,7 +25,7 @@ public class ReferenceArticles {
     }
 
     public static String expectedKichenSinkTransformedXml() {
-        return readFromFile("ArticleWithEverythingAttributes.xml");
+        return expectedTransformedXml;
     }
 
 
