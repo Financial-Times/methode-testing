@@ -1,12 +1,10 @@
 package com.ft.methodetesting;
 
-import java.io.IOException;
-
 import com.ft.methodeapi.model.EomFile;
+import com.ft.methodetesting.xml.Xml;
 import com.google.common.base.Charsets;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
-import com.google.common.io.Resources;
 
 public class MethodeArticle {
 	
@@ -57,6 +55,8 @@ public class MethodeArticle {
 		private String articleXml;
 		private String attributesXml;
 
+        private Builder() { }
+
 		public Builder withHeadline(String expectedPublishedArticleHeadline) {
 	        attributesXml = attributesXml.replace(HEADLINE_FROM_TEST_FILE,expectedPublishedArticleHeadline);
 	        articleXml = articleXml.replace(HEADLINE_FROM_TEST_FILE, expectedPublishedArticleHeadline);
@@ -74,18 +74,16 @@ public class MethodeArticle {
         }
 		
 		public MethodeArticle buildPublishedArticle() {
-			return published().article();
+			return published().build();
 		}
 
 		public MethodeArticle buildDeletedArticle() {
-            return deleted().article();
+            return deleted().build();
 		}
 
-        public MethodeArticle article() {
-            return build();
-        }
-
         public MethodeArticle build() {
+            Xml.assertParseable(articleXml);
+            Xml.assertParseable(attributesXml);
             return new MethodeArticle(articleXml, attributesXml);
         }
 

@@ -24,7 +24,7 @@ public class ReferenceArticles {
         return MethodeArticle.builder(exampleArticleXmlTemplate,exampleAttributesXml).deleted();
     }
 
-    public static String expectedKichenSinkTransformedXml() {
+    public static String expectedKitchenSinkTransformedXml() {
         return expectedTransformedXml;
     }
 

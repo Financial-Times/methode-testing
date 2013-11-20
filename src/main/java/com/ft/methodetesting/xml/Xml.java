@@ -21,12 +21,27 @@ import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.StringReader;
 
+import static org.junit.Assert.assertTrue;
+
 /**
  * Xml testing util
  *
  * @author Simon.Gibbs
  */
 public class Xml {
+
+
+    public static void assertParseable(String xmlSource) {
+
+        String message = "Xml not parseable: " + xmlSource;
+        Document xmlDom = null;
+        try {
+            xmlDom = parseAndSimplify(xmlSource);
+        } catch(Exception e) {
+            throw new AssertionError(message,e);
+        }
+        assertTrue(message,xmlDom !=null);
+    }
 
     public static String removeInsignificantXml(String xmlSource, String[] insignificantPaths) throws Exception {
 
