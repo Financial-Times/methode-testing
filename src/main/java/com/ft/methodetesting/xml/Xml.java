@@ -20,6 +20,8 @@ import javax.xml.xpath.XPathFactory;
 import java.io.ByteArrayOutputStream;
 import java.io.OutputStream;
 import java.io.StringReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static org.junit.Assert.assertTrue;
 
@@ -53,8 +55,29 @@ public class Xml {
 
         emitDocumentWithoutWhitespace(xmlDom, out);
 
-        return new String(out.toByteArray(),"UTF-8");
+        return resolveEntities(new String(out.toByteArray(),"UTF-8"));
 
+    }
+
+    public static String resolveEntities(String xmlSource) {
+        Pattern pattern = Pattern.compile("&#(\\d+);");
+
+        Matcher matcher = pattern.matcher(xmlSource);
+
+        while(matcher.find()) {
+            String codepointDecimal = matcher.group(1);
+            int codepoint = Integer.parseInt(codepointDecimal);
+
+            xmlSource = String.format("%s%s%s",
+                    xmlSource.substring(0,matcher.start()),
+                    (char) codepoint,
+                    xmlSource.substring(matcher.end())
+                );
+
+            matcher = pattern.matcher(xmlSource);
+        }
+
+        return xmlSource;
     }
 
     public static void stripPaths(Document xmlDom, String[] insignificantPaths) throws XPathExpressionException {
