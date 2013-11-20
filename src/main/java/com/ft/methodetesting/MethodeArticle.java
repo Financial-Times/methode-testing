@@ -8,7 +8,7 @@ import com.google.common.base.Preconditions;
 
 public class MethodeArticle {
 	
-	public static final String HEADLINE_FROM_TEST_FILE = "Eurozone collapses ...! Kaboom.";
+	public static final String HEADLINE_FROM_TEST_FILE = "Lead headline \u00a342m for S&amp;P\u2019s \u201cup 79%\u201d";
 	public static final String MARK_DELETED_TRUE = "<DIFTcomMarkDeleted>True</DIFTcomMarkDeleted>";
 	public static final String MARK_DELETED_FALSE = "<DIFTcomMarkDeleted>False</DIFTcomMarkDeleted>";
 
