@@ -4,6 +4,15 @@ This is an example of bold text : This text is bold
 
 This is an example of italic text : This text is italic
 
+Emphasis
+
+Strong
+Superscript
+
+Subscript
+
+Underline
+
 Links
 
 This is a link for an FT article that has been cut and paste from a browser: http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html.
@@ -116,14 +125,14 @@ Euro: €
 
 Pull Quotes
 
-&lt;Think left and think right and think low and think high. Oh, the thinks you can think up if only you try!
+<Think left and think right and think low and think high. Oh, the thinks you can think up if only you try!
 
 
 
 Dr. Seuss
 
 
-&gt;
+>
 
 
 
@@ -137,7 +146,7 @@ The UK government has struck a deal with the French utility EDF to build the cou
 The agreement was reached after the government guaranteed a price of £92.50 per megawatt hour for electricity produced at Hinkley Point C in Somerset. The “strike price”, fully indexed to consumer price inflation, is roughly double the current price of power.
 It forms the centrepiece of a long-awaited deal between the government and EDF and paves the way for the construction of the £16bn power station which, when completed in 2023, will provide 7 per cent of the UK’s electricity.
 
-&lt;Interactive graphic
+<Interactive graphic
 
 
 
@@ -153,7 +162,7 @@ Find out more about the people whom Barack Obama considers his “brain trust”
 
 
 
-&gt;
+>
 
 
 
@@ -416,22 +425,24 @@ Latin small letter y with acute ( ý )
 Latin small letter thorn ( þ )
 Latin small letter y with diaeresis ( ÿ )
 END OF LIST
+
 -- Paragraphs --
 
 This is a paragraph.
 This is another paragraph.
 This paragraph contains a nested This is the nested paragraph. paragraph.
 The next paragraph is empty.
+
 The previous paragraph is empty.
 Paragraph tag with title and onclick attributes
-Text separated by line break 1 Text separated by line break 2
+Text separated by line break 1Text separated by line break 2
 Heading 1
 Heading 2
 Heading 3
 Heading 4
 Heading 5
 Heading 6
-Ordered List Item 1
+Ordered ListItem 1
 Item 2
 Item 3
 
@@ -440,6 +451,7 @@ Item 2
 Item 3
 
 Strong With Title Attribute
+
 -- Self Closing hr Tag --
 
 
