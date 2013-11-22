@@ -100,7 +100,7 @@
 </p>
 <p>This is an example of bold text : <b>This text is bold &lt;b&gt;</b>
 </p>
-<p>This is an example of italic text : <i>This text is italic &lt;i&gt;</i>
+<p>This is an example of italic text : <i>This text is italic &lt;i&lt;</i>
 </p>
 <p><em>Emphasis</em>
 </p>
