@@ -1,4 +1,4 @@
-<p><strong>Text Formatting</strong>
+<body><p><strong>Text Formatting</strong>
 </p>
 <p>This is an example of bold text : <strong>This text is bold &lt;b></strong>
 </p>
@@ -399,3 +399,5 @@
 <p>Script Tag: 
 
 </p>
+
+</body>
