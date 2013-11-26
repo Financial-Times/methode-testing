@@ -62,7 +62,7 @@
 <p>The text between this sentence and the one after (starting “Apple”) is struck out and hidden from <strong>all channels</strong>. Apple shares rocketed today on news of the forthcoming iWatch.</p>
 <p>The next entire paragraph is struck out and hidden from <strong>all channels</strong>:</p>
 
-<p>The text between this sentence and the one after (starting “Microsoft”) is struck out and <strong>restricted to only the Ft.com channel</strong>. Microsoft showcased their new range of Surface tablet devices in New York today.</p>
+
 <p>The next entire paragraph is struck out and <strong>hidden from the newspaper channel</strong>:</p>
 
 <p>The next entire paragraph is struck out and <strong>restricted to only the newspaper channel and should not be seen by web users:</strong>
