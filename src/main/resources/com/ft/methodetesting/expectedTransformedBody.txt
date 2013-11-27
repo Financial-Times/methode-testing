@@ -133,9 +133,7 @@
 
 <p><strong>Embedded Slideshow</strong>
 </p>
-<p><a href="/FT/Content/Companies/Stories/Live/PlainSlideshow.gallery.xml?uuid=49336a18-051c-11e3-98a0-002128161462">One typical, bog-standard slideshow headline update 2
-</a>
-</p>
+
 
 <p><strong>Flash</strong>
 </p>
