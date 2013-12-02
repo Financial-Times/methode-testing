@@ -16,6 +16,9 @@ public class ReferenceArticles {
     private static final String exampleAttributesXml = readFromFile("ArticleWithEverythingAttributes.xml");
     private static final String expectedTransformedXml = readFromFile("expectedTransformedBody.txt");
 
+    private static final String simpleArticleXmlTemplate = readFromFile("SimplifiedArticle.xml");
+    private static final String simpleTransformedXml = readFromFile("simplifiedTransformedBody.txt");
+
     public static MethodeArticle.Builder publishedKitchenSinkArticle() {
         return MethodeArticle.builder(exampleArticleXmlTemplate, exampleAttributesXml).published();
     }
@@ -26,6 +29,14 @@ public class ReferenceArticles {
 
     public static String expectedKitchenSinkTransformedXml() {
         return expectedTransformedXml;
+    }
+
+    public static MethodeArticle.Builder publishedSimpleArticle() {
+        return MethodeArticle.builder(simpleArticleXmlTemplate,exampleAttributesXml).published();
+    }
+
+    public static String simplifiedTransformedXml() {
+        return simpleTransformedXml;
     }
 
 
