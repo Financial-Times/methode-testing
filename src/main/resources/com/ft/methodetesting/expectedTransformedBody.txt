@@ -17,12 +17,12 @@
 
 <p><strong>Links</strong>
 </p>
-<p>This is a link for an FT article that has been cut and paste from a browser: <a title="www.ft.com" href="http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html">http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html</a>.</p>
-<p>This link was added using Right-click, Insert Hyperlink: <a href="/FT/Content/Companies/Stories/Live/ProdStory3.xml?uuid=bba9479a-d987-11e2-bce1-002128161462">A story about something financial</a>
+<p>This is a link for an FT article that has been cut and paste from a browser: <a title="www.ft.com" href="http://www.ft.com/cms/s/e78a8668-c997-11e1-aae2-002128161462.html">http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html</a>.</p>
+<p>This link was added using Right-click, Insert Hyperlink: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://localhost:9090/content/bba9479a-d987-11e2-bce1-002128161462">A story about something financial</ft-content>
 </p>
-<p>This link was added using drag and drop of an article: <a href="/FT/Content/Companies/Stories/Live/ProdStory3.xml?uuid=bba9479a-d987-11e2-bce1-002128161462">A story about something financial that was dragged and dropped</a>
+<p>This link was added using drag and drop of an article: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://localhost:9090/content/bba9479a-d987-11e2-bce1-002128161462">A story about something financial that was dragged and dropped</ft-content>
 </p>
-<p>This link was added by cutting and pasing a URL of a valid FT article: <a title="www.ft.com" href="http://www.ft.com/cms/s/2/f3b60ad0-acda-11e2-a7c4-002128161462.html">http://www.ft.com/cms/s/2/f3b60ad0-acda-11e2-a7c4-002128161462.html</a>
+<p>This link was added by cutting and pasing a URL of a valid FT article: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://localhost:9090/content/f3b60ad0-acda-11e2-a7c4-002128161462" title="www.ft.com">http://www.ft.com/cms/s/2/f3b60ad0-acda-11e2-a7c4-002128161462.html</ft-content>
 </p>
 <p>This link was added by cutting and pasting a URL from the BBC: <a title="www.bbc.co.uk" href="http://www.bbc.co.uk/news/world-africa-24577711">http://www.bbc.co.uk/news/world-africa-24577711</a>
 </p>
@@ -62,12 +62,12 @@
 <p>The text between this sentence and the one after (starting “Apple”) is struck out and hidden from <strong>all channels</strong>. Apple shares rocketed today on news of the forthcoming iWatch.</p>
 <p>The next entire paragraph is struck out and hidden from <strong>all channels</strong>:</p>
 
-<p>The text between this sentence and the one after (starting “Microsoft”) is struck out and <strong>restricted to only the Ft.com channel</strong>. This text is struck out and hidden from the newspaper channel, but should be visible for web. Microsoft showcased their new range of Surface tablet devices in New York today.</p>
+
 <p>The next entire paragraph is struck out and <strong>hidden from the newspaper channel</strong>:</p>
-<p>This whole paragraph is struck out and hidden from the newspaper channel, but should be visible to web users.</p>
+
 <p>The next entire paragraph is struck out and <strong>restricted to only the newspaper channel and should not be seen by web users:</strong>
 </p>
-<p>This text should not be seen by web users.</p>
+
 <p><strong>Company Data</strong>
 </p>
 <p>This is an example of company share data displayed on hover. Google released their third quarter results today on the back of record smartphone sales.</p>
@@ -133,9 +133,7 @@
 
 <p><strong>Embedded Slideshow</strong>
 </p>
-<p><a href="/FT/Content/Companies/Stories/Live/PlainSlideshow.gallery.xml?uuid=49336a18-051c-11e3-98a0-002128161462">One typical, bog-standard slideshow headline update 2
-</a>
-</p>
+
 
 <p><strong>Flash</strong>
 </p>
