@@ -144,17 +144,7 @@
 <p>Two words separated by a Figure space: apple banana</p>
 <p>Two words separated by a Punctuation space: apple banana</p>
 <p>Two words separated by a Non-breaking space: apple banana</p>
-<p><b>Strike Out Text</b>
-</p>
-<p>The text between this sentence and the one after (starting “Apple”) is struck out and hidden from <b>all channels</b>. <span channel="!">All of the text in this sentence is struck out.</span>Apple shares rocketed today on news of the forthcoming iWatch.</p>
-<p>The next entire paragraph is struck out and hidden from <b>all channels</b>:</p>
-<p channel="!">This is a struck out paragraph. It should not be seen by end-users.</p>
-<p channel="">The text between this sentence and the one after (starting “Microsoft”) is struck out and <b>restricted to only the Ft.com channel</b>. <span channel="FTcom">This text is struck out and hidden from the newspaper channel, but should be visible for web. </span>Microsoft showcased their new range of Surface tablet devices in New York today.</p>
-<p>The next entire paragraph is struck out and <b>hidden from the newspaper channel</b>:</p>
-<p channel="!Financial Times">This whole paragraph is struck out and hidden from the newspaper channel, but should be visible to web users.</p>
-<p>The next entire paragraph is struck out and <b>restricted to only the newspaper channel and should not be seen by web users:</b>
-</p>
-<p channel="Financial Times">This text should not be seen by web users.</p>
+
 <p><b>Company Data</b>
 </p>
 <p>This is an example of company share data displayed on hover. <company DICoName="Google Inc" DICoFTMWTickercode="us:GOOG" DICoCOFlag="" DICoSEDOL="B020QX2" DICoISIN="" DICoFTCode="GOOGL00000" DICoTickerSymbol="GOOG" DICoTickerExchangeCode="" DICoTickerExchangeCountry="us" Version="" CompositeId="TnN0ZWluX09OX0ZvcnR1bmVDb21wYW55X0dPT0c=-T04=">Google</company> released their third quarter results today on the back of record smartphone sales.</p>
