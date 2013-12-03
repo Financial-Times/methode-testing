@@ -18,11 +18,11 @@
 <p><strong>Links</strong>
 </p>
 <p>This is a link for an FT article that has been cut and paste from a browser: <a title="www.ft.com" href="http://www.ft.com/cms/s/e78a8668-c997-11e1-aae2-002128161462.html">http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html</a>.</p>
-<p>This link was added using Right-click, Insert Hyperlink: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://[READ-API-TOKEN]/content/bba9479a-d987-11e2-bce1-002128161462">A story about something financial</ft-content>
+<p>This link was added using Right-click, Insert Hyperlink: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://localhost:9090/content/bba9479a-d987-11e2-bce1-002128161462">A story about something financial</ft-content>
 </p>
-<p>This link was added using drag and drop of an article: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://[READ-API-TOKEN]/content/bba9479a-d987-11e2-bce1-002128161462">A story about something financial that was dragged and dropped</ft-content>
+<p>This link was added using drag and drop of an article: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://localhost:9090/content/bba9479a-d987-11e2-bce1-002128161462">A story about something financial that was dragged and dropped</ft-content>
 </p>
-<p>This link was added by cutting and pasing a URL of a valid FT article: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://[READ-API-TOKEN]/content/f3b60ad0-acda-11e2-a7c4-002128161462" title="www.ft.com">http://www.ft.com/cms/s/2/f3b60ad0-acda-11e2-a7c4-002128161462.html</ft-content>
+<p>This link was added by cutting and pasing a URL of a valid FT article: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://localhost:9090/content/f3b60ad0-acda-11e2-a7c4-002128161462" title="www.ft.com">http://www.ft.com/cms/s/2/f3b60ad0-acda-11e2-a7c4-002128161462.html</ft-content>
 </p>
 <p>This link was added by cutting and pasting a URL from the BBC: <a title="www.bbc.co.uk" href="http://www.bbc.co.uk/news/world-africa-24577711">http://www.bbc.co.uk/news/world-africa-24577711</a>
 </p>

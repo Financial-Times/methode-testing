@@ -4,6 +4,8 @@ import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * ReferenceArticles
@@ -49,10 +51,26 @@ public class ReferenceArticles {
             if (System.getProperty("line.separator").equals("\r\n")) {
                 bodyFromFile = bodyFromFile.replace("\r", "");
             }
+            
         } catch (IOException e) {
             throw new RuntimeException("Unexpected error reading from content in JAR file",e);
         }
+        
         return bodyFromFile;
+    }
+    
+    public static String replaceToken(String xmlBody, String token, String replacementString){
+    	Pattern pattern = Pattern.compile(token);
+    	Matcher matcher = pattern.matcher(xmlBody);
+    	StringBuilder builder = new StringBuilder();
+    	int i = 0;
+    	while (matcher.find()) {
+    	    builder.append(xmlBody.substring(i, matcher.start()));
+			builder.append(replacementString);
+    	    i = matcher.end();
+    	}
+    	builder.append(xmlBody.substring(i, xmlBody.length()));
+    	return builder.toString();
     }
 
 }
