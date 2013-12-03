@@ -44,9 +44,11 @@ public class ReferenceArticlesTest {
     }
     
     @Test
-    public void shouldReplaceTokenStrings() {
+    public void shouldReplaceTokenStringsAndCanonicalize() {
     	String expectedKitchenSinkTransformedXml = ReferenceArticles.expectedKitchenSinkTransformedXml();
     	String expectedBodyWithTokenReplaced = ReferenceArticles.replaceToken(expectedKitchenSinkTransformedXml, "\\[(READ-API-TOKEN)\\]", "localhost:9090");
+    	String canonicalized = ReferenceArticles.replaceToken(expectedBodyWithTokenReplaced, "<br/>", "<br></br>");
+    	
     	String bodyFromFile = "";
         try {
             bodyFromFile = Resources.toString(ReferenceArticles.class.getResource("expectedTransformedBodyWithTokenReplaced.txt"), Charsets.UTF_8);
@@ -59,7 +61,7 @@ public class ReferenceArticlesTest {
             throw new RuntimeException("Unexpected error reading from content in JAR file",e);
         }
         
-        assertEquals(bodyFromFile, expectedBodyWithTokenReplaced);
+        assertEquals(bodyFromFile, canonicalized);
     }
     
     
