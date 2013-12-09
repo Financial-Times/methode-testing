@@ -51,7 +51,7 @@ public class ReferenceArticlesTest {
     	
     	String bodyFromFile = "";
         try {
-            bodyFromFile = Resources.toString(ReferenceArticles.class.getResource("expectedTransformedBodyWithTokenReplaced.txt"), Charsets.UTF_8);
+            bodyFromFile = Resources.toString(ReferenceArticlesTest.class.getResource("expectedTransformedBodyWithTokenReplaced.txt"), Charsets.UTF_8);
 
             if (System.getProperty("line.separator").equals("\r\n")) {
                 bodyFromFile = bodyFromFile.replace("\r", "");
