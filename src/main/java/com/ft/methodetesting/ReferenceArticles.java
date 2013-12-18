@@ -22,11 +22,11 @@ public class ReferenceArticles {
     private static final String simpleTransformedXml = readFromFile("simplifiedTransformedBody.txt");
 
     public static MethodeArticle.Builder publishedKitchenSinkArticle() {
-        return MethodeArticle.builder(exampleArticleXmlTemplate, exampleAttributesXml).published();
+        return MethodeArticle.builder(exampleArticleXmlTemplate, exampleAttributesXml, MethodeArticle.WEB_READY).published();
     }
 
     public static MethodeArticle.Builder unpublishedKitchenSinkArticle() {
-        return MethodeArticle.builder(exampleArticleXmlTemplate,exampleAttributesXml).deleted();
+        return MethodeArticle.builder(exampleArticleXmlTemplate,exampleAttributesXml, MethodeArticle.WEB_READY).deleted();
     }
 
     public static String expectedKitchenSinkTransformedXml() {
@@ -34,7 +34,7 @@ public class ReferenceArticles {
     }
 
     public static MethodeArticle.Builder publishedSimpleArticle() {
-        return MethodeArticle.builder(simpleArticleXmlTemplate,exampleAttributesXml).published();
+        return MethodeArticle.builder(simpleArticleXmlTemplate,exampleAttributesXml, MethodeArticle.WEB_READY).published();
     }
 
     public static String simplifiedTransformedXml() {

@@ -3,6 +3,7 @@ package com.ft.methodetesting;
 import org.junit.Test;
 
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.core.StringContains.containsString;
 import static org.junit.Assert.assertThat;
@@ -39,5 +40,16 @@ public class MethodeArticleBuilderTest {
         assertThat(attributesXml,not(containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE)));
         assertThat(attributesXml,containsString(EDITED_HEADLINE));
     }
+
+	@Test
+	public void builtArticleShouldHaveCorrectWorkflowStatus() {
+		assertThat(ReferenceArticles.publishedKitchenSinkArticle().build().getWorkflowStatus(), containsString(MethodeArticle.WEB_READY));
+	}
+
+	@Test
+	public void builtArticleShouldHaveChangedWorkflowStatus() {
+		String workflowStatus = ReferenceArticles.publishedKitchenSinkArticle().withWorkflowStatus(MethodeArticle.WEB_REVISE).build().getWorkflowStatus();
+		assertThat(workflowStatus, is(MethodeArticle.WEB_REVISE));
+	}
 
 }

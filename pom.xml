@@ -40,7 +40,7 @@
         <dependency>
             <groupId>com.ft.methode-api</groupId>
             <artifactId>methode-api-model</artifactId>
-            <version>0.1.192</version>
+            <version>0.1.234</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
