@@ -13,16 +13,28 @@ public class MethodeArticle {
 	public static final String MARK_DELETED_FALSE = "<DIFTcomMarkDeleted>False</DIFTcomMarkDeleted>";
 	public static final String WEB_REVISE = "Stories/WebRevise";
 	public static final String WEB_READY = "Stories/WebReady";
+	public static final String WEB_CHANNEL = "FTcom";
+	public static final String NEWSPAPER_CHANNEL = "Financial Times";
+
 	private static final String SOURCE = "<Source title=\"Financial Times\"><SourceCode>FT</SourceCode><SourceDescriptor>Financial Times</SourceDescriptor>";
+	private static final String SYSTEM_ATTRIBUTES_WEB = "<props><productInfo><name>FTcom</name>\n" +
+			"<issueDate>20131219</issueDate>\n" +
+			"</productInfo>\n" +
+			"<workFolder>/FT/Companies</workFolder>\n" +
+			"<templateName>/SysConfig/Templates/FT/Base-Story.xml</templateName>\n" +
+			"<summary>t text text text text text text text text text text text text text\n" +
+			" text text text text te...</summary><wordCount>417</wordCount></props>";
 
 	private String articleXml;
 	private String attributesXml;
 	private String workflowStatus;
+	private String systemAttributes;
 
-	public MethodeArticle(String articleXml, String attributesXml, String workflowStatus) {
+	public MethodeArticle(String articleXml, String attributesXml, String workflowStatus, String systemAttributes) {
 		this.articleXml = articleXml;
 		this.attributesXml = attributesXml;
 		this.workflowStatus = workflowStatus;
+		this.systemAttributes = systemAttributes;
 	}
 
 	public String getArticleXml() {
@@ -37,10 +49,14 @@ public class MethodeArticle {
 		return workflowStatus;
 	}
 
+	public String getSystemAttributes() {
+		return systemAttributes;
+	}
+
 	public EomFile getEomFile() {
 		return new EomFile("","EOM::CompoundStory",
                 articleXml.getBytes(Charsets.UTF_8),
-                attributesXml, workflowStatus
+                attributesXml, workflowStatus, systemAttributes
             );
 	}
 	
@@ -50,14 +66,16 @@ public class MethodeArticle {
                 .add("articleXml", articleXml)
                 .add("attributesXml", attributesXml)
 				.add("workflowStatus", workflowStatus)
+				.add("systemAttributes", systemAttributes)
                 .toString();
     }
 
-    public static Builder builder(String articleXml, String attributesXml, String workflowStatus) {
+    public static Builder builder(String articleXml, String attributesXml, String workflowStatus, String systemAttributes) {
         Builder builder = new Builder();
         builder.articleXml = articleXml;
         builder.attributesXml = attributesXml;
 		builder.workflowStatus = workflowStatus;
+		builder.systemAttributes = systemAttributes;
         return builder;
     }
 	
@@ -66,6 +84,7 @@ public class MethodeArticle {
 		private String articleXml;
 		private String attributesXml;
 		private String workflowStatus;
+		private String systemAttributes = SYSTEM_ATTRIBUTES_WEB;
 
 		private Builder() { }
 
@@ -83,6 +102,11 @@ public class MethodeArticle {
 		public Builder withSource(String source) {
 			String newSourceXml = SOURCE.replace("Financial Times", source).replace("FT", source);
 			attributesXml = attributesXml.replace(SOURCE, newSourceXml);
+			return this;
+		}
+
+		public Builder withChannel(String channel) {
+			systemAttributes = SYSTEM_ATTRIBUTES_WEB.replace("FTcom", channel);
 			return this;
 		}
 
@@ -107,7 +131,7 @@ public class MethodeArticle {
         public MethodeArticle build() {
             Xml.assertParseable(articleXml);
             Xml.assertParseable(attributesXml);
-            return new MethodeArticle(articleXml, attributesXml, workflowStatus);
+            return new MethodeArticle(articleXml, attributesXml, workflowStatus, systemAttributes);
         }
 	}
 	

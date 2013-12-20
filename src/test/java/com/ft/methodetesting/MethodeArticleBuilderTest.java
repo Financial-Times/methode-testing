@@ -62,4 +62,21 @@ public class MethodeArticleBuilderTest {
 		assertThat(attributesXml, CoreMatchers.containsString(newSourceXml));
 	}
 
+	@Test
+	public void builtArticleShouldHaveWebChannelByDefault() {
+		String newSystemAttributesXml = "<name>FTcom</name>";
+
+		String systemAttributesXml = ReferenceArticles.publishedKitchenSinkArticle().build().getSystemAttributes();
+		assertThat(systemAttributesXml, CoreMatchers.containsString(newSystemAttributesXml));
+	}
+
+	@Test
+	public void builtArticleShouldHaveChangedChannel() {
+		String newChannel = MethodeArticle.NEWSPAPER_CHANNEL;
+		String newSystemAttributesXml = String.format("<name>%s</name>", newChannel);
+
+		String systemAttributesXml = ReferenceArticles.publishedKitchenSinkArticle().withChannel(newChannel).build().getSystemAttributes();
+		assertThat(systemAttributesXml, CoreMatchers.containsString(newSystemAttributesXml));
+	}
+
 }
