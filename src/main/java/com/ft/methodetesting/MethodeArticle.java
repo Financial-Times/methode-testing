@@ -13,6 +13,7 @@ public class MethodeArticle {
 	public static final String MARK_DELETED_FALSE = "<DIFTcomMarkDeleted>False</DIFTcomMarkDeleted>";
 	public static final String WEB_REVISE = "Stories/WebRevise";
 	public static final String WEB_READY = "Stories/WebReady";
+	private static final String SOURCE = "<Source title=\"Financial Times\"><SourceCode>FT</SourceCode><SourceDescriptor>Financial Times</SourceDescriptor>";
 
 	private String articleXml;
 	private String attributesXml;
@@ -66,7 +67,7 @@ public class MethodeArticle {
 		private String attributesXml;
 		private String workflowStatus;
 
-        private Builder() { }
+		private Builder() { }
 
 		public Builder withHeadline(String expectedPublishedArticleHeadline) {
 	        attributesXml = attributesXml.replace(HEADLINE_FROM_TEST_FILE,expectedPublishedArticleHeadline);
@@ -76,6 +77,12 @@ public class MethodeArticle {
 
 		public Builder withWorkflowStatus(String workflowStatus) {
 			this.workflowStatus = workflowStatus;
+			return this;
+		}
+
+		public Builder withSource(String source) {
+			String newSourceXml = SOURCE.replace("Financial Times", source).replace("FT", source);
+			attributesXml = attributesXml.replace(SOURCE, newSourceXml);
 			return this;
 		}
 
@@ -102,7 +109,6 @@ public class MethodeArticle {
             Xml.assertParseable(attributesXml);
             return new MethodeArticle(articleXml, attributesXml, workflowStatus);
         }
-
 	}
 	
 

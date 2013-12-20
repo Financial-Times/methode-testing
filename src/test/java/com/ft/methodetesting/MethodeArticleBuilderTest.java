@@ -1,5 +1,6 @@
 package com.ft.methodetesting;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 
@@ -50,6 +51,15 @@ public class MethodeArticleBuilderTest {
 	public void builtArticleShouldHaveChangedWorkflowStatus() {
 		String workflowStatus = ReferenceArticles.publishedKitchenSinkArticle().withWorkflowStatus(MethodeArticle.WEB_REVISE).build().getWorkflowStatus();
 		assertThat(workflowStatus, is(MethodeArticle.WEB_REVISE));
+	}
+
+	@Test
+	public void builtArticleShouldHaveChangedSource() {
+		String newSource = "Reuters";
+		String newSourceXml = String.format("<Source title=\"%s\"><SourceCode>%s</SourceCode><SourceDescriptor>%s</SourceDescriptor>", newSource, newSource, newSource);
+
+		String attributesXml = ReferenceArticles.publishedKitchenSinkArticle().withSource(newSource).build().getAttributesXml();
+		assertThat(attributesXml, CoreMatchers.containsString(newSourceXml));
 	}
 
 }
