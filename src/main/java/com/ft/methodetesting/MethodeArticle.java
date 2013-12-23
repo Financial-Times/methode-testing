@@ -6,6 +6,12 @@ import com.google.common.base.Charsets;
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+
 public class MethodeArticle {
 	
 	public static final String HEADLINE_FROM_TEST_FILE = "Lead headline \u00a342m for S&amp;P\u2019s \u201cup 79%\u201d";
@@ -15,6 +21,7 @@ public class MethodeArticle {
 	public static final String WEB_READY = "Stories/WebReady";
 	public static final String WEB_CHANNEL = "FTcom";
 	public static final String NEWSPAPER_CHANNEL = "Financial Times";
+	public static final String METHODE_DATE_FORMAT = "yyyyMMddHHmmss";
 
 	private static final String SOURCE = "<Source title=\"Financial Times\"><SourceCode>FT</SourceCode><SourceDescriptor>Financial Times</SourceDescriptor>";
 	private static final String SYSTEM_ATTRIBUTES_WEB = "<props><productInfo><name>FTcom</name>\n" +
@@ -85,6 +92,7 @@ public class MethodeArticle {
 		private String attributesXml;
 		private String workflowStatus;
 		private String systemAttributes = SYSTEM_ATTRIBUTES_WEB;
+		private static final String EMBARGO_DATE = "<EmbargoDate/>";
 
 		private Builder() { }
 
@@ -110,7 +118,21 @@ public class MethodeArticle {
 			return this;
 		}
 
-        public Builder published() {
+		public Builder withEmbargoDate(Date embargoDate) {
+			attributesXml = attributesXml.replace(EMBARGO_DATE, String.format("<EmbargoDate>%s</EmbargoDate>", inMethodeFormat(embargoDate)));
+			return this;
+		}
+
+		private String inMethodeFormat(Date date) {
+			Calendar cal = Calendar.getInstance();
+			cal.setTime(date);
+
+			DateFormat methodeDateFormat = new SimpleDateFormat(METHODE_DATE_FORMAT);
+			methodeDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+			return methodeDateFormat.format(cal.getTime());
+		}
+
+		public Builder published() {
             Preconditions.checkArgument(!this.attributesXml.contains(MARK_DELETED_TRUE),"already deleted");
             return this;
         }

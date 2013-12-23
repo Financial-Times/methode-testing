@@ -4,6 +4,12 @@ import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.core.StringContains.containsString;
@@ -60,6 +66,25 @@ public class MethodeArticleBuilderTest {
 
 		String attributesXml = ReferenceArticles.publishedKitchenSinkArticle().withSource(newSource).build().getAttributesXml();
 		assertThat(attributesXml, CoreMatchers.containsString(newSourceXml));
+	}
+
+	@Test
+	public void builtArticleShouldHaveChangedEmbargoDate() {
+		Date embargoDate = new Date();
+		String embargoDateAsString = inMethodeFormat(embargoDate);
+		String newSourceXml = String.format("<EmbargoDate>%s</EmbargoDate>", embargoDateAsString);
+
+		String attributesXml = ReferenceArticles.publishedKitchenSinkArticle().withEmbargoDate(embargoDate).build().getAttributesXml();
+		assertThat(attributesXml, CoreMatchers.containsString(newSourceXml));
+	}
+
+	private String inMethodeFormat(Date date) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+
+		DateFormat methodeDateFormat = new SimpleDateFormat(MethodeArticle.METHODE_DATE_FORMAT);
+		methodeDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+		return methodeDateFormat.format(cal.getTime());
 	}
 
 	@Test
