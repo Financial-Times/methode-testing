@@ -1,8 +1,16 @@
 package com.ft.methodetesting;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
+
+import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.core.StringContains.containsString;
 import static org.junit.Assert.assertThat;
@@ -39,5 +47,61 @@ public class MethodeArticleBuilderTest {
         assertThat(attributesXml,not(containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE)));
         assertThat(attributesXml,containsString(EDITED_HEADLINE));
     }
+
+	@Test
+	public void builtArticleShouldHaveCorrectWorkflowStatus() {
+		assertThat(ReferenceArticles.publishedKitchenSinkArticle().build().getWorkflowStatus(), containsString(MethodeArticle.WEB_READY));
+	}
+
+	@Test
+	public void builtArticleShouldHaveChangedWorkflowStatus() {
+		String workflowStatus = ReferenceArticles.publishedKitchenSinkArticle().withWorkflowStatus(MethodeArticle.WEB_REVISE).build().getWorkflowStatus();
+		assertThat(workflowStatus, is(MethodeArticle.WEB_REVISE));
+	}
+
+	@Test
+	public void builtArticleShouldHaveChangedSource() {
+		String newSource = "Reuters";
+		String newSourceXml = String.format("<Source title=\"%s\"><SourceCode>%s</SourceCode><SourceDescriptor>%s</SourceDescriptor>", newSource, newSource, newSource);
+
+		String attributesXml = ReferenceArticles.publishedKitchenSinkArticle().withSource(newSource).build().getAttributesXml();
+		assertThat(attributesXml, CoreMatchers.containsString(newSourceXml));
+	}
+
+	@Test
+	public void builtArticleShouldHaveChangedEmbargoDate() {
+		Date embargoDate = new Date();
+		String embargoDateAsString = inMethodeFormat(embargoDate);
+		String newSourceXml = String.format("<EmbargoDate>%s</EmbargoDate>", embargoDateAsString);
+
+		String attributesXml = ReferenceArticles.publishedKitchenSinkArticle().withEmbargoDate(embargoDate).build().getAttributesXml();
+		assertThat(attributesXml, CoreMatchers.containsString(newSourceXml));
+	}
+
+	private String inMethodeFormat(Date date) {
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+
+		DateFormat methodeDateFormat = new SimpleDateFormat(MethodeArticle.METHODE_DATE_FORMAT);
+		methodeDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+		return methodeDateFormat.format(cal.getTime());
+	}
+
+	@Test
+	public void builtArticleShouldHaveWebChannelByDefault() {
+		String newSystemAttributesXml = "<name>FTcom</name>";
+
+		String systemAttributesXml = ReferenceArticles.publishedKitchenSinkArticle().build().getSystemAttributes();
+		assertThat(systemAttributesXml, CoreMatchers.containsString(newSystemAttributesXml));
+	}
+
+	@Test
+	public void builtArticleShouldHaveChangedChannel() {
+		String newChannel = MethodeArticle.NEWSPAPER_CHANNEL;
+		String newSystemAttributesXml = String.format("<name>%s</name>", newChannel);
+
+		String systemAttributesXml = ReferenceArticles.publishedKitchenSinkArticle().withChannel(newChannel).build().getSystemAttributes();
+		assertThat(systemAttributesXml, CoreMatchers.containsString(newSystemAttributesXml));
+	}
 
 }

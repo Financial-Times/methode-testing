@@ -16,17 +16,19 @@ public class ReferenceArticles {
 
     private static final String exampleArticleXmlTemplate = readFromFile("ArticleWithEverything.xml");
     private static final String exampleAttributesXml = readFromFile("ArticleWithEverythingAttributes.xml");
+	private static final String exampleWebChannelXml = readFromFile("ArticleWithEverythingSystemAttributes.xml");
     private static final String expectedTransformedXml = readFromFile("expectedTransformedBody.txt");
 
     private static final String simpleArticleXmlTemplate = readFromFile("SimplifiedArticle.xml");
     private static final String simpleTransformedXml = readFromFile("simplifiedTransformedBody.txt");
+	private static final String simplifiedArticleWebChannelXml = readFromFile("SimplifiedArticleSystemAttributes.xml");
 
     public static MethodeArticle.Builder publishedKitchenSinkArticle() {
-        return MethodeArticle.builder(exampleArticleXmlTemplate, exampleAttributesXml).published();
+        return MethodeArticle.builder(exampleArticleXmlTemplate, exampleAttributesXml, MethodeArticle.WEB_READY, exampleWebChannelXml).published();
     }
 
     public static MethodeArticle.Builder unpublishedKitchenSinkArticle() {
-        return MethodeArticle.builder(exampleArticleXmlTemplate,exampleAttributesXml).deleted();
+        return MethodeArticle.builder(exampleArticleXmlTemplate,exampleAttributesXml, MethodeArticle.WEB_READY, exampleWebChannelXml).deleted();
     }
 
     public static String expectedKitchenSinkTransformedXml() {
@@ -34,7 +36,7 @@ public class ReferenceArticles {
     }
 
     public static MethodeArticle.Builder publishedSimpleArticle() {
-        return MethodeArticle.builder(simpleArticleXmlTemplate,exampleAttributesXml).published();
+        return MethodeArticle.builder(simpleArticleXmlTemplate,exampleAttributesXml, MethodeArticle.WEB_READY, simplifiedArticleWebChannelXml).published();
     }
 
     public static String simplifiedTransformedXml() {
