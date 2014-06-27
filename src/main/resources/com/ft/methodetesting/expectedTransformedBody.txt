@@ -1,6 +1,6 @@
 <body><p><strong>Text Formatting</strong>
 </p>
-<p>This is an example of bold text : <strong>This text is bold &lt;b></strong>
+<p>This is an example of bold text : <strong>This text is bold &lt;b&gt;</strong>
 </p>
 <p>This is an example of italic text : <em>This text is italic &lt;i&lt;</em>
 </p>
@@ -17,14 +17,14 @@
 
 <p><strong>Links</strong>
 </p>
-<p>This is a link for an FT article that has been cut and paste from a browser: <a title="www.ft.com" href="http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html">http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html</a>.</p>
-<p>This link was added using Right-click, Insert Hyperlink: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://[READ-API-TOKEN]/content/bba9479a-d987-11e2-bce1-002128161462">A story about something financial</ft-content>
+<p>This is a link for an FT article that has been cut and paste from a browser: <a href="http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html" title="www.ft.com">http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html</a>.</p>
+<p>This link was added using Right-click, Insert Hyperlink: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://[READ-API-TOKEN]/content/9b9fed88-d986-11e2-bce1-002128161462">A story about something financial</ft-content>
 </p>
-<p>This link was added using drag and drop of an article: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://[READ-API-TOKEN]/content/bba9479a-d987-11e2-bce1-002128161462">A story about something financial that was dragged and dropped</ft-content>
+<p>This link was added using drag and drop of an article: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://[READ-API-TOKEN]/content/9b9fed88-d986-11e2-bce1-002128161462">A story about something financial that was dragged and dropped</ft-content>
 </p>
-<p>This link was added by cutting and pasing a URL of a valid FT article: <ft-content type="http://www.ft.com/ontology/content/Article" url="http://[READ-API-TOKEN]/content/f3b60ad0-acda-11e2-a7c4-002128161462" title="www.ft.com">http://www.ft.com/cms/s/2/f3b60ad0-acda-11e2-a7c4-002128161462.html</ft-content>
+<p>This link was added by cutting and pasing a URL of a valid FT article: <ft-content title="www.ft.com" type="http://www.ft.com/ontology/content/Article" url="http://[READ-API-TOKEN]/content/f3b60ad0-acda-11e2-a7c4-002128161462">http://www.ft.com/cms/s/2/f3b60ad0-acda-11e2-a7c4-002128161462.html</ft-content>
 </p>
-<p>This link was added by cutting and pasting a URL from the BBC: <a title="www.bbc.co.uk" href="http://www.bbc.co.uk/news/world-africa-24577711">http://www.bbc.co.uk/news/world-africa-24577711</a>
+<p>This link was added by cutting and pasting a URL from the BBC: <a href="http://www.bbc.co.uk/news/world-africa-24577711" title="www.bbc.co.uk">http://www.bbc.co.uk/news/world-africa-24577711</a>
 </p>
 <p><strong>Lists</strong>
 </p>
@@ -73,10 +73,10 @@
 <p>This is an example of company share data displayed on hover. Google released their third quarter results today on the back of record smartphone sales.</p>
 <p><strong>Tables</strong>
 </p>
-<p><em>Table added using Insert > Table</em>
+<p><em>Table added using Insert &gt; Table</em>
 </p>
 
-<p><em>Table added using Insert > Component</em>
+<p><em>Table added using Insert &gt; Component</em>
 </p>
 
 
@@ -171,7 +171,7 @@
 <p>Semicolon ( ; )</p>
 <p>Less than (or open angled bracket) ( &lt; )</p>
 <p>Equals ( = )</p>
-<p>Greater than (or close angled bracket) ( > )</p>
+<p>Greater than (or close angled bracket) ( &gt; )</p>
 <p>Question mark ( ? )</p>
 <p>At symbol ( @ )</p>
 <p>Uppercase A ( A )</p>
@@ -371,7 +371,7 @@
 
 <p>The previous paragraph is empty.</p>
 <p>Paragraph tag with title and onclick attributes</p>
-<p>Text separated by line break 1<br/>Text separated by line break 2</p>
+<p>Text separated by line break 1<br></br>Text separated by line break 2</p>
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
