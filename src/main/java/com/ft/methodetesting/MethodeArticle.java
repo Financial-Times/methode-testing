@@ -63,8 +63,7 @@ public class MethodeArticle {
 	public EomFile getEomFile() {
 		return new EomFile("","EOM::CompoundStory",
                 articleXml.getBytes(Charsets.UTF_8),
-                attributesXml, workflowStatus, systemAttributes
-            );
+                attributesXml, workflowStatus, systemAttributes, "usageTickets");
 	}
 	
 	@Override
