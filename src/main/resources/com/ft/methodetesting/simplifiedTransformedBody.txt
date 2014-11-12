@@ -14,7 +14,6 @@
 </p>
 <p>Underline
 </p>
-
 <p><strong>Lists</strong>
 </p>
 <p>The following is a bulleted list:</p>
@@ -46,7 +45,6 @@
 <p>Two words separated by a Figure space: apple banana</p>
 <p>Two words separated by a Punctuation space: apple banana</p>
 <p>Two words separated by a Non-breaking space: apple banana</p>
-
 <p><strong>Company Data</strong>
 </p>
 <p>This is an example of company share data displayed on hover. Google released their third quarter results today on the back of record smartphone sales.</p>
@@ -54,28 +52,16 @@
 </p>
 <p><em>Table added using Insert > Table</em>
 </p>
-
 <p><em>Table added using Insert > Component</em>
 </p>
-
-
-
-
-
 <p><strong>Currency Characters</strong>
 </p>
 <p>Sterling: £</p>
 <p>Dollar: $</p>
 <p>Yen: ¥</p>
 <p>Euro: €</p>
-
 <p><strong>Pull Quotes</strong>
 </p>
-
-
-
-
-
 <p><strong>Special Characters List</strong>
 </p>
 <p>Space (   )</p>
@@ -298,14 +284,12 @@
 <p>Latin small letter thorn ( þ )</p>
 <p>Latin small letter y with diaeresis ( ÿ )</p>
 <p>END OF LIST</p>
-
 <p><strong>-- Paragraphs -- </strong>
 </p>
 <p>This is a paragraph.</p>
 <p>This is another paragraph.</p>
 <p>This paragraph contains a nested <p>This is the nested paragraph.</p> paragraph.</p>
 <p>The next paragraph is empty.</p>
-
 <p>The previous paragraph is empty.</p>
 <p>Paragraph tag with title and onclick attributes</p>
 <p>Text separated by line break 1<br/>Text separated by line break 2</p>
@@ -327,10 +311,8 @@
 </p>
 <p><strong>-- Self Closing hr Tag --</strong>
 </p>
-
 <p><strong>-- Content Within Unwanted Tags --</strong>
 </p>
-
 <p>Script Tag: 
 
 </p>
