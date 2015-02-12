@@ -2,6 +2,7 @@ package com.ft.methodetesting;
 
 import com.ft.methodeapi.model.EomFile;
 import com.ft.methodetesting.util.FileUtil;
+import org.apache.commons.io.IOUtils;
 
 import java.io.DataInputStream;
 import java.io.InputStream;
@@ -37,14 +38,7 @@ public class MasterImage {
     }
 
     protected byte[] loadImage() throws Exception {
-        try (
-                final InputStream is = getClass().getClassLoader().getResourceAsStream(imagePath);
-                final DataInputStream dis = new DataInputStream(is)) {
-            final int disLength = dis.available();
-            byte[] imageBytes = new byte[disLength];
-            assertThat(dis.read(imageBytes, 0, dis.available()), equalTo(disLength));
-            return imageBytes;
-        }
+        return IOUtils.toByteArray(MasterImage.class.getResourceAsStream("/" + imagePath));
     }
 
 }
