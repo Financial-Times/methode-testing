@@ -12,9 +12,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
-
-public class Article {
+public class ImageArticles {
 
     private static final String STORY_TYPE = "EOM::CompoundStory";
     private static final String SOURCE_CODE = "FT";
@@ -24,7 +22,9 @@ public class Article {
     private static final Charset UTF_8 = Charset.forName("UTF-8");
     public static final String IMAGE_SET_ONTOLOGY = "http://www.ft.com/ontology/content/ImageSet";
     private static final String simpleArticleXmlTemplate = FileUtil.loadFile("article/simple_article_value.xml");
-    private static final String articleWithImagesXmlTemplate = FileUtil.loadFile("article/article_value_with_image.xml");
+    private static final String articleWithMainImageXmlTemplate = FileUtil.loadFile("article/article_value_with_main_image.xml");
+    private static final String articleWithInlineImageXmlTemplate = FileUtil.loadFile("article/article_value_with_inline_image.xml");
+    private static final String articleWithMainAndInlineImageXmlTemplate = FileUtil.loadFile("article/article_value_with_main_and_inline_image.xml");
     private static final String articleAttributesXml = FileUtil.loadFile("article/article_attributes.xml");
     private static final String articleSystemAttributesXml = FileUtil.loadFile("article/article_system_attributes.xml");
 
@@ -40,13 +40,37 @@ public class Article {
                 .build();
     }
 
-    public static EomFile buildArticleWithImage(String articleUuid, String mainImageUuid, String markedDeleted, String workflowStatus) throws IOException {
+    public static EomFile buildArticleWithMainImage(String articleUuid, String mainImageUuid, String markedDeleted, String workflowStatus) throws IOException {
 
         return new EomFile.Builder()
                 .withUuid(articleUuid)
                 .withType(STORY_TYPE)
-                .withValue(String.format(articleWithImagesXmlTemplate, mainImageUuid).getBytes(UTF_8))
-                .withAttributes(String.format(articleAttributesXml, methodeFormatDate(),markedDeleted,SOURCE_CODE))
+                .withValue(String.format(articleWithMainImageXmlTemplate, mainImageUuid).getBytes(UTF_8))
+                .withAttributes(String.format(articleAttributesXml, methodeFormatDate(), markedDeleted, SOURCE_CODE))
+                .withSystemAttributes(String.format(articleSystemAttributesXml, CHANEL, STORY_TEMPLATE))
+                .withWorkflowStatus(workflowStatus)
+                .build();
+    }
+
+    public static EomFile buildArticleWithInlineImage(String articleUuid, String inlineImageUuid, String markedDeleted, String workflowStatus) throws IOException {
+
+        return new EomFile.Builder()
+                .withUuid(articleUuid)
+                .withType(STORY_TYPE)
+                .withValue(String.format(articleWithInlineImageXmlTemplate, inlineImageUuid).getBytes(UTF_8))
+                .withAttributes(String.format(articleAttributesXml, methodeFormatDate(), markedDeleted, SOURCE_CODE))
+                .withSystemAttributes(String.format(articleSystemAttributesXml, CHANEL, STORY_TEMPLATE))
+                .withWorkflowStatus(workflowStatus)
+                .build();
+    }
+
+    public static EomFile buildArticleWithMainImageAndInlineImage(String articleUuid, String mainImageUuid, String inlineImageUuid, String markedDeleted, String workflowStatus) throws IOException {
+
+        return new EomFile.Builder()
+                .withUuid(articleUuid)
+                .withType(STORY_TYPE)
+                .withValue(String.format(articleWithMainAndInlineImageXmlTemplate, mainImageUuid, inlineImageUuid).getBytes(UTF_8))
+                .withAttributes(String.format(articleAttributesXml, methodeFormatDate(), markedDeleted, SOURCE_CODE))
                 .withSystemAttributes(String.format(articleSystemAttributesXml, CHANEL, STORY_TEMPLATE))
                 .withWorkflowStatus(workflowStatus)
                 .build();
@@ -61,5 +85,4 @@ public class Article {
         methodeDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
         return methodeDateFormat.format(cal.getTime());
     }
-
 }

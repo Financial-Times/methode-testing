@@ -4,7 +4,7 @@
     <lead>
         <lead-images id="U2701877253086gfF">
             <web-master width="2048" height="1152" id="U2701877253086TGC"
-                        fileref="/FT/Graphics/Online/Master_2048x1152/dummy.jpg?uuid=%s"/>
+                        fileref="/FT/Graphics/Online/Master_2048x1152/dummy_main.jpg?uuid=%s"/>
             <web-skybox-picture/>
             <web-alt-picture/>
             <web-popup-preview width="167" height="96"/>
@@ -22,6 +22,12 @@
         <text>
             <body>
                 <p>random text for now</p>
+                <p>
+                    <web-inline-picture xtransform="scale(0.116 0.116)" width="236" height="133" align="left" alt=""
+                                        channel="FTcom" dtxInsert="Left-aligned landscape"
+                                        fileref="/FT/Graphics/Online/Master_2048x1152/dummy_inline.jpg?uuid=%s"
+                                        id="U2701932419636vL"/>
+                </p>
             </body>
         </text>
     </story>
