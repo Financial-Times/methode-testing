@@ -282,10 +282,10 @@
 <p><b>Images</b>
 </p>
 <p></p>
-<!--<p><web-inline-picture fileref="/FT/Content/Companies/Stories/Live/acceptance-test/images/gif_example.gif?uuid=89db87d4-3b37-11e3-8f44-002128161462" tmx="272 193 272 193"/>-->
-<!--</p>-->
-<!--<p><web-inline-picture fileref="/FT/Content/Companies/Stories/Live/acceptance-test/images/jpg_example.jpg?uuid=ab39a514-3b37-11e3-8f44-002128161462" tmx="272 192 272 192"/>-->
-<!--</p>-->
+<p><web-inline-picture fileref="/FT/Content/Companies/Stories/Live/acceptance-test/images/gif_example.gif?uuid=89db87d4-3b37-11e3-8f44-002128161462" tmx="272 193 272 193"/>
+</p>
+<p><web-inline-picture fileref="/FT/Content/Companies/Stories/Live/acceptance-test/images/jpg_example.jpg?uuid=ab39a514-3b37-11e3-8f44-002128161462" tmx="272 192 272 192"/>
+</p>
 <p></p>
 <p>The first image is a GIF, the second a JPEG. Text should wrap around inline images, so the following is some typical body text.</p>
 <p>The UK government has struck a deal with the French utility EDF to build the country’s first new nuclear plant in a generation.</p>
