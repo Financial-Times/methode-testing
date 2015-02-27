@@ -5,6 +5,7 @@
         <DIFTcom>
             <DIFTcomLastPublication>%s</DIFTcomLastPublication>
             <DIFTcomMarkDeleted>%s</DIFTcomMarkDeleted>
+            <DIFTcomArticleImage>%s</DIFTcomArticleImage>
         </DIFTcom>
     </OutputChannels>
     <EditorialNotes>
