@@ -162,7 +162,7 @@
 <p channel="!">This is a struck out paragraph. It should not be seen by end-users.</p>
 <p channel="">The text between this sentence and the one after (starting “Microsoft”) is struck out and <b>restricted to only the Ft.com channel</b>. <span channel="FTcom">This text is struck out and hidden from the newspaper channel, but should be visible for web. </span>Microsoft showcased their new range of Surface tablet devices in New York today.</p>
 <p>The next entire paragraph is struck out and <b>hidden from the newspaper channel</b>:</p>
-<p channel="!Financial Times">This whole paragraph is struck out and hidden from the newspaper channel, but should be visible to web users.</p>
+<p channel="!Financial Times">This whole paragraph is not struck out, but should be visible to web users.</p>
 <p>The next entire paragraph is struck out and <b>restricted to only the newspaper channel and should not be seen by web users:</b>
 </p>
 <p channel="Financial Times">This text should not be seen by web users.</p>

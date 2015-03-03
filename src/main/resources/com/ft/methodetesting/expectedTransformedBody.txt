@@ -1,6 +1,6 @@
 <body><p><strong>Text Formatting</strong>
 </p>
-<p>This is an example of bold text : <strong>This text is bold &lt;b&gt;</strong>
+<p>This is an example of bold text : <strong>This text is bold &lt;b></strong>
 </p>
 <p>This is an example of italic text : <em>This text is italic &lt;i&lt;</em>
 </p>
@@ -61,6 +61,7 @@
 <p>The text between this sentence and the one after (starting “Apple”) is struck out and hidden from <strong>all channels</strong>. Apple shares rocketed today on news of the forthcoming iWatch.</p>
 <p>The next entire paragraph is struck out and hidden from <strong>all channels</strong>:</p>
 <p>The next entire paragraph is struck out and <strong>hidden from the newspaper channel</strong>:</p>
+<p>This whole paragraph is not struck out, but should be visible to web users.</p>
 <p>The next entire paragraph is struck out and <strong>restricted to only the newspaper channel and should not be seen by web users:</strong>
 </p>
 <p><strong>Company Data</strong>
@@ -68,9 +69,9 @@
 <p>This is an example of company share data displayed on hover. Google released their third quarter results today on the back of record smartphone sales.</p>
 <p><strong>Tables</strong>
 </p>
-<p><em>Table added using Insert &gt; Table</em>
+<p><em>Table added using Insert > Table</em>
 </p>
-<p><em>Table added using Insert &gt; Component</em>
+<p><em>Table added using Insert > Component</em>
 </p>
 <p><strong>Currency Characters</strong>
 </p>
@@ -128,7 +129,7 @@
 <p>Semicolon ( ; )</p>
 <p>Less than (or open angled bracket) ( &lt; )</p>
 <p>Equals ( = )</p>
-<p>Greater than (or close angled bracket) ( &gt; )</p>
+<p>Greater than (or close angled bracket) ( > )</p>
 <p>Question mark ( ? )</p>
 <p>At symbol ( @ )</p>
 <p>Uppercase A ( A )</p>
@@ -326,7 +327,7 @@
 <p>The next paragraph is empty.</p>
 <p>The previous paragraph is empty.</p>
 <p>Paragraph tag with title and onclick attributes</p>
-<p>Text separated by line break 1<br></br>Text separated by line break 2</p>
+<p>Text separated by line break 1<br/>Text separated by line break 2</p>
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>
