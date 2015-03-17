@@ -84,6 +84,9 @@
 <p>The UK government has struck a deal with the French utility EDF to build the country’s first new nuclear plant in a generation.</p>
 <p>The agreement was reached after the government guaranteed a price of £92.50 per megawatt hour for electricity produced at Hinkley Point C in Somerset. The “strike price”, fully indexed to consumer price inflation, is roughly double the current price of power.</p>
 <p>It forms the centrepiece of a long-awaited deal between the government and EDF and paves the way for the construction of the £16bn power station which, when completed in 2023, will provide 7 per cent of the UK’s electricity.</p>
+<p><promo-box><promo-title><p>Interactive graphic</p></promo-title><promo-headline><p><a href="http://www.ft.com/intl/cms/s/0/d586f60a-5be5-11e2-bf31-00144feab49a.html#axzz2JHnL9QfI" title="Obama’s inner circle - FT.com">Obama’s inner circle</a>
+</p></promo-headline><promo-intro><p>Find out more about the people whom Barack Obama considers his “brain trust”.</p></promo-intro></promo-box>
+</p>
 <p><strong>Typical Body Text With Promo Box</strong>
 </p>
 <p>Prime minister David Cameron welcomed the deal, saying it would create 25,000 jobs and that it marked “the next generation of nuclear power in Britain, which has an important part to play in contributing to our future energy needs and our longer term security of supply’’.</p>
