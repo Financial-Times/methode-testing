@@ -12,7 +12,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class MethodeArticle {
+public class MethodeContent {
 	
 	public static final String HEADLINE_FROM_TEST_FILE = "Lead headline \u00a342m for S&amp;P\u2019s \u201cup 79%\u201d";
 	public static final String MARK_DELETED_TRUE = "<DIFTcomMarkDeleted>True</DIFTcomMarkDeleted>";
@@ -32,21 +32,23 @@ public class MethodeArticle {
 			"<summary>t text text text text text text text text text text text text text\n" +
 			" text text text text te...</summary><wordCount>417</wordCount></props>";
 
+//    private String typeName;
 	private String articleXml;
 	private String attributesXml;
 	private String workflowStatus;
 	private String systemAttributes;
 
-	public MethodeArticle(String articleXml, String attributesXml, String workflowStatus, String systemAttributes) {
-		this.articleXml = articleXml;
+	public MethodeContent( String articleXml, String attributesXml, String workflowStatus, String systemAttributes) { //String typeName,
+//        this.typeName = typeName;
+        this.articleXml = articleXml;
 		this.attributesXml = attributesXml;
 		this.workflowStatus = workflowStatus;
 		this.systemAttributes = systemAttributes;
 	}
 
-	public String getArticleXml() {
-		return articleXml;
-	}
+//    public String getTypeName() { return typeName; }
+
+	public String getArticleXml() { return articleXml; }
 	
 	public String getAttributesXml() {
 		return attributesXml;
@@ -69,6 +71,7 @@ public class MethodeArticle {
 	@Override
     public String toString() {
         return Objects.toStringHelper(this.getClass())
+//                .add("typeName", typeName)
                 .add("articleXml", articleXml)
                 .add("attributesXml", attributesXml)
 				.add("workflowStatus", workflowStatus)
@@ -76,8 +79,9 @@ public class MethodeArticle {
                 .toString();
     }
 
-    public static Builder builder(String articleXml, String attributesXml, String workflowStatus, String systemAttributes) {
+    public static Builder builder(String articleXml, String attributesXml, String workflowStatus, String systemAttributes) { //String typeName,
         Builder builder = new Builder();
+//        builder.typeName = typeName;
         builder.articleXml = articleXml;
         builder.attributesXml = attributesXml;
 		builder.workflowStatus = workflowStatus;
@@ -87,6 +91,7 @@ public class MethodeArticle {
 	
 	public static class Builder {
 
+        private String typeName;
 		private String articleXml;
 		private String attributesXml;
 		private String workflowStatus;
@@ -122,6 +127,11 @@ public class MethodeArticle {
 			return this;
 		}
 
+//        public Builder withTypeName(String typeName) {
+//            this.typeName = typeName;
+//            return this;
+//        }
+
 		private String inMethodeFormat(Date date) {
 			Calendar cal = Calendar.getInstance();
 			cal.setTime(date);
@@ -141,18 +151,18 @@ public class MethodeArticle {
             return this;
         }
 		
-		public MethodeArticle buildPublishedArticle() {
+		public MethodeContent buildPublishedArticle() {
 			return published().build();
 		}
 
-		public MethodeArticle buildDeletedArticle() {
+		public MethodeContent buildDeletedArticle() {
             return deleted().build();
 		}
 
-        public MethodeArticle build() {
+        public MethodeContent build() {
             Xml.assertParseable(articleXml);
             Xml.assertParseable(attributesXml);
-            return new MethodeArticle(articleXml, attributesXml, workflowStatus, systemAttributes);
+            return new MethodeContent(articleXml, attributesXml, workflowStatus, systemAttributes); //typeName,
         }
 	}
 	

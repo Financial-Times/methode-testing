@@ -7,21 +7,17 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * ReferenceArticles
- *
- * @author Simon.Gibbs
- */
-public class ReferenceArticles {
+public class ReferenceLists {
 
     private static final String exampleArticleXmlTemplate = readFromFile("ArticleWithEverything.xml");
     private static final String exampleAttributesXml = readFromFile("ArticleWithEverythingAttributes.xml");
-	private static final String exampleWebChannelXml = readFromFile("ArticleWithEverythingSystemAttributes.xml");
+    private static final String exampleWebChannelXml = readFromFile("ArticleWithEverythingSystemAttributes.xml");
     private static final String expectedTransformedXml = readFromFile("expectedTransformedBody.txt");
+    private static final String exampleListXmlTemplate = readFromFile("ArticleWithEverything.xml");
 
     private static final String simpleArticleXmlTemplate = readFromFile("SimplifiedArticle.xml");
     private static final String simpleTransformedXml = readFromFile("simplifiedTransformedBody.txt");
-	private static final String simplifiedArticleWebChannelXml = readFromFile("SimplifiedArticleSystemAttributes.xml");
+    private static final String simplifiedArticleWebChannelXml = readFromFile("SimplifiedArticleSystemAttributes.xml");
 
     public static MethodeContent.Builder publishedKitchenSinkArticle() {
         return MethodeContent.builder(exampleArticleXmlTemplate, exampleAttributesXml, MethodeContent.WEB_READY, exampleWebChannelXml).published();
@@ -53,26 +49,27 @@ public class ReferenceArticles {
             if (System.getProperty("line.separator").equals("\r\n")) {
                 bodyFromFile = bodyFromFile.replace("\r", "");
             }
-            
+
         } catch (IOException e) {
             throw new RuntimeException("Unexpected error reading from content in JAR file",e);
         }
-        
+
         return bodyFromFile;
     }
-    
+
     public static String replaceToken(String xmlBody, String token, String replacementString){
-    	Pattern pattern = Pattern.compile(token);
-    	Matcher matcher = pattern.matcher(xmlBody);
-    	StringBuilder builder = new StringBuilder();
-    	int i = 0;
-    	while (matcher.find()) {
-    	    builder.append(xmlBody.substring(i, matcher.start()));
-			builder.append(replacementString);
-    	    i = matcher.end();
-    	}
-    	builder.append(xmlBody.substring(i, xmlBody.length()));
-    	return builder.toString();
+        Pattern pattern = Pattern.compile(token);
+        Matcher matcher = pattern.matcher(xmlBody);
+        StringBuilder builder = new StringBuilder();
+        int i = 0;
+        while (matcher.find()) {
+            builder.append(xmlBody.substring(i, matcher.start()));
+            builder.append(replacementString);
+            i = matcher.end();
+        }
+        builder.append(xmlBody.substring(i, xmlBody.length()));
+        return builder.toString();
     }
 
 }
+
