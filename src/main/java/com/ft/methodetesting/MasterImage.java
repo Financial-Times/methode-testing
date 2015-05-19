@@ -34,7 +34,7 @@ public class MasterImage {
         systemAttributes = FileUtil.loadFile(MASTER_IMAGE_SYSTEM_ATTRIBUTES_XML);
         usageTickets = FileUtil.loadFile(MASTER_IMAGE_USAGE_TICKETS_XML);
         imageBinary = loadImage();
-        return new EomFile(uuid, "Image", imageBinary, attributes, "", systemAttributes, usageTickets);
+        return new EomFile(uuid, "Image", imageBinary, attributes, "", systemAttributes, usageTickets, null);
     }
 
     protected byte[] loadImage() throws Exception {
