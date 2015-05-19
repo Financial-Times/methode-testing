@@ -1,20 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE ObjectMetadata SYSTEM "/SysConfig/Classify/FTStories/classify.dtd">
 <ObjectMetadata>
+    <EditorialDisplayIndexing>
+        <DILeadCompanies/>
+        <DITemporaryCompanies>
+            <DITemporaryCompany>
+                <DICoTempCode/>
+                <DICoTempDescriptor/>
+                <DICoTickerCode/>
+            </DITemporaryCompany>
+        </DITemporaryCompanies>
+        <DIFTSEGlobalClassifications/>
+        <DIStockExchangeIndices/>
+        <DIHotTopics/>
+        <DIHeadlineCopy>
+        </DIHeadlineCopy>
+        <DIBylineCopy/>
+        <DIFTNPSections/>
+        <DIFirstParCopy>
+        </DIFirstParCopy><DIMasterImgFileRef/></EditorialDisplayIndexing>
     <OutputChannels>
+        <DIFTN>
+            <DIFTNPublicationDate/>
+            <DIFTNZoneEdition/>
+            <DIFTNPage/>
+            <DIFTNTimeEdition/>
+            <DIFTNFronts/>
+        </DIFTN>
         <DIFTcom>
+            <DIFTcomWebType>story</DIFTcomWebType>
+            <DIFTcomDisplayCodes>
+                <DIFTcomDisplayCodeRank1/>
+                <DIFTcomDisplayCodeRank2/>
+            </DIFTcomDisplayCodes>
+            <DIFTcomSubscriptionLevel>0</DIFTcomSubscriptionLevel>
+            <DIFTcomUpdateTimeStamp>False</DIFTcomUpdateTimeStamp>
+            <DIFTcomIndexAndSynd/>
+            <DIFTcomSafeToSyndicate/>
+            <DIFTcomInitialPublication/>
             <DIFTcomLastPublication>%s</DIFTcomLastPublication>
+            <DIFTcomSuppresInlineAds>False</DIFTcomSuppresInlineAds>
+            <DIFTcomMap>True</DIFTcomMap>
+            <DIFTcomDisplayStyle>Normal</DIFTcomDisplayStyle>
+            <DIFTcomFeatureType>Normal</DIFTcomFeatureType>
             <DIFTcomMarkDeleted>%s</DIFTcomMarkDeleted>
-            <DIFTcomArticleImage>%s</DIFTcomArticleImage>
-        </DIFTcom>
+            <DIFTcomMakeUnlinkable>False</DIFTcomMakeUnlinkable>
+            <isBestStory>0</isBestStory>
+            <DIFTcomCMRId/>
+            <DIFTcomCMRHint/>
+            <DIFTcomCMR>
+                <DIFTcomCMRPrimarySection/>
+                <DIFTcomCMRPrimarySectionId/>
+                <DIFTcomCMRPrimaryTheme/>
+                <DIFTcomCMRPrimaryThemeId/>
+                <DIFTcomCMRBrand/>
+                <DIFTcomCMRBrandId/>
+                <DIFTcomCMRGenre/>
+                <DIFTcomCMRGenreId/>
+                <DIFTcomCMRMediaType/>
+                <DIFTcomCMRMediaTypeId/>
+            </DIFTcomCMR>
+            <DIFTcomECPositionInText>Default</DIFTcomECPositionInText><DIFTcomHideECLevel1>False</DIFTcomHideECLevel1><DIFTcomHideECLevel2>False</DIFTcomHideECLevel2><DIFTcomHideECLevel3>False</DIFTcomHideECLevel3><DIFTcomDiscussion>True</DIFTcomDiscussion><DIFTcomArticleImage>%s</DIFTcomArticleImage></DIFTcom>
+        <DISyndication>
+            <DISyndBeenCopied>False</DISyndBeenCopied>
+            <DISyndEdition>USA</DISyndEdition>
+            <DISyndStar>01</DISyndStar>
+            <DISyndChannel/>
+            <DISyndArea/>
+            <DISyndCategory/>
+        </DISyndication>
     </OutputChannels>
     <EditorialNotes>
-        <EmbargoDate></EmbargoDate>
+        <Language>English</Language>
+        <Author>dynpubtest</Author>
+        <Guides/>
+        <Editor/>
         <Sources>
-            <Source>
-                <SourceCode>%s</SourceCode>
+            <Source title="Financial Times">
+                <SourceCode>FT</SourceCode>
+                <SourceDescriptor>Financial Times</SourceDescriptor>
+                <SourceOnlineInclusion>True</SourceOnlineInclusion>
+                <SourceCanBeSyndicated>True</SourceCanBeSyndicated>
             </Source>
         </Sources>
-        <ObjectLocation>FT/Content/World News/Stories/Live/TestForSteveAshdown.xml</ObjectLocation>
+        <WordCount>0</WordCount>
+        <CreationDate>20150519095023</CreationDate>
+        <EmbargoDate/>
+        <ExpiryDate>20150519095023</ExpiryDate>
+        <ObjectLocation>/FT/Content/Companies/Stories/Live/test_story.xml</ObjectLocation>
+        <OriginatingStory/>
+        <CCMS>
+            <CCMSCommissionRefNo/>
+            <CCMSContributorRefNo/>
+            <CCMSContributorFullName/>
+            <CCMSContributorInclude/>
+            <CCMSContributorRights/>
+            <CCMSFilingDate/>
+            <CCMSProposedPublishingDate/>
+        </CCMS>
     </EditorialNotes>
+    <WiresIndexing>
+        <category/>
+        <Keyword/>
+        <char_count/>
+        <priority/>
+        <basket/>
+        <title/>
+        <Version/>
+        <story_num/>
+        <file_name/>
+        <serviceid/>
+        <entry_date/>
+        <ref_field/>
+        <take_num/>
+    </WiresIndexing>
+    <DataFactoryIndexing>
+        <ADRIS_MetaData>
+            <IndexSuccess/>
+            <StartTime/>
+            <EndTime/>
+        </ADRIS_MetaData>
+        <DFMajorCompanies/>
+        <DFMinorCompanies/>
+        <DFNAICS/>
+        <DFWPMIndustries/>
+        <DFFTSEGlobalClassifications/>
+        <DFStockExchangeIndices/>
+        <DFSubjects/>
+        <DFCountries/>
+        <DFRegions/>
+        <DFWebRegions/>
+        <DFWPMRegions/>
+        <DFProvinces/>
+        <DFFTcomDisplayCodes/>
+        <DFFTSections/>
+    </DataFactoryIndexing>
 </ObjectMetadata>

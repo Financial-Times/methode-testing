@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ObjectMetadata SYSTEM "/SysConfig/Classify/FTStories/classify.dtd"><ObjectMetadata>
+<!DOCTYPE ObjectMetadata SYSTEM "/SysConfig/Classify/FTStories/classify.dtd">
+<ObjectMetadata>
     <EditorialDisplayIndexing>
-        <DILeadCompanies><DILeadCompany title="Google Inc"><DICoFTCode>GOOGL00000</DICoFTCode><DICoDescriptor>Google Inc</DICoDescriptor><DICoTickerSymbol>GOOG</DICoTickerSymbol><DICoTickerExchangeCountry>us</DICoTickerExchangeCountry><DICoTickerExchangeCode/><DICoFTMWTickercode>us:GOOG</DICoFTMWTickercode><DICoSEDOL>B020QX2</DICoSEDOL><DICoISIN/><DICoCOFlag/><DICoVersion/></DILeadCompany></DILeadCompanies>
+        <DILeadCompanies>
+            <DILeadCompany title="Google Inc">
+                <DICoFTCode>GOOGL00000</DICoFTCode>
+                <DICoDescriptor>Google Inc</DICoDescriptor>
+                <DICoTickerSymbol>GOOG</DICoTickerSymbol>
+                <DICoTickerExchangeCountry>us</DICoTickerExchangeCountry>
+                <DICoTickerExchangeCode/>
+                <DICoFTMWTickercode>us:GOOG</DICoFTMWTickercode>
+                <DICoSEDOL>B020QX2</DICoSEDOL>
+                <DICoISIN/>
+                <DICoCOFlag/>
+                <DICoVersion/>
+            </DILeadCompany>
+        </DILeadCompanies>
         <DITemporaryCompanies>
             <DITemporaryCompany>
                 <DICoTempCode/>
@@ -13,9 +27,11 @@
         <DIStockExchangeIndices/>
         <DIHotTopics/>
         <DIHeadlineCopy>Lead headline £42m for S&amp;P’s “up 79%”</DIHeadlineCopy>
-        <DIBylineCopy>By </DIBylineCopy>
-        
-    <DIFTNPSections/></EditorialDisplayIndexing>
+        <DIBylineCopy>By</DIBylineCopy>
+        <DIFTNPSections/>
+        <DIFirstParCopy/>
+        <DIMasterImgFileRef/>
+    </EditorialDisplayIndexing>
     <OutputChannels>
         <DIFTN>
             <DIFTNPublicationDate/>
@@ -39,6 +55,7 @@
             <DIFTcomSuppresInlineAds>False</DIFTcomSuppresInlineAds>
             <DIFTcomMap>True</DIFTcomMap>
             <DIFTcomDisplayStyle>Normal</DIFTcomDisplayStyle>
+            <DIFTcomFeatureType>Normal</DIFTcomFeatureType>
             <DIFTcomMarkDeleted>False</DIFTcomMarkDeleted>
             <DIFTcomMakeUnlinkable>False</DIFTcomMakeUnlinkable>
             <isBestStory>0</isBestStory>
@@ -56,13 +73,13 @@
                 <DIFTcomCMRMediaType/>
                 <DIFTcomCMRMediaTypeId/>
             </DIFTcomCMR>
-            
-            
-            
-            
-            
-            
-        <DIFTcomECPositionInText>Default</DIFTcomECPositionInText><DIFTcomHideECLevel1>False</DIFTcomHideECLevel1><DIFTcomHideECLevel2>False</DIFTcomHideECLevel2><DIFTcomHideECLevel3>False</DIFTcomHideECLevel3><DIFTcomDiscussion>True</DIFTcomDiscussion><DIFTcomArticleImage>Primary size</DIFTcomArticleImage></DIFTcom>
+            <DIFTcomECPositionInText>Default</DIFTcomECPositionInText>
+            <DIFTcomHideECLevel1>False</DIFTcomHideECLevel1>
+            <DIFTcomHideECLevel2>False</DIFTcomHideECLevel2>
+            <DIFTcomHideECLevel3>False</DIFTcomHideECLevel3>
+            <DIFTcomDiscussion>True</DIFTcomDiscussion>
+            <DIFTcomArticleImage>Primary size</DIFTcomArticleImage>
+        </DIFTcom>
         <DISyndication>
             <DISyndBeenCopied>False</DISyndBeenCopied>
             <DISyndEdition>USA</DISyndEdition>
@@ -74,17 +91,22 @@
     </OutputChannels>
     <EditorialNotes>
         <Language>English</Language>
-        <Author>roddamm</Author>
+        <Author>dynpubtest</Author>
         <Guides/>
         <Editor/>
         <Sources>
-            
-        <Source title="Financial Times"><SourceCode>FT</SourceCode><SourceDescriptor>Financial Times</SourceDescriptor><SourceOnlineInclusion>True</SourceOnlineInclusion><SourceCanBeSyndicated>True</SourceCanBeSyndicated></Source></Sources>
+            <Source title="Financial Times">
+                <SourceCode>FT</SourceCode>
+                <SourceDescriptor>Financial Times</SourceDescriptor>
+                <SourceOnlineInclusion>True</SourceOnlineInclusion>
+                <SourceCanBeSyndicated>True</SourceCanBeSyndicated>
+            </Source>
+        </Sources>
         <WordCount>2502</WordCount>
-        <CreationDate>20131018133645</CreationDate>
+        <CreationDate>20150519095023</CreationDate>
         <EmbargoDate/>
-        <ExpiryDate>20131018133645</ExpiryDate>
-        <ObjectLocation>/FT/Content/World News/Stories/Live/TestForSteveAshdown.xml</ObjectLocation>
+        <ExpiryDate>20150519095023</ExpiryDate>
+        <ObjectLocation>/FT/Content/World News/Stories/Live/test story.xml</ObjectLocation>
         <OriginatingStory/>
         <CCMS>
             <CCMSCommissionRefNo/>
@@ -111,5 +133,25 @@
         <ref_field/>
         <take_num/>
     </WiresIndexing>
-    
-<DataFactoryIndexing><ADRIS_MetaData><IndexSuccess>yes</IndexSuccess><StartTime>Mon Oct 28 12:14:21 GMT 2013</StartTime><EndTime>Mon Oct 28 12:14:22 GMT 2013</EndTime></ADRIS_MetaData><DFMajorCompanies/><DFMinorCompanies/><DFNAICS/><DFWPMIndustries/><DFFTSEGlobalClassifications/><DFStockExchangeIndices/><DFSubjects/><DFCountries/><DFRegions/><DFWPMRegions/><DFProvinces/><DFFTcomDisplayCodes/><DFFTSections/><DFWebRegions/></DataFactoryIndexing></ObjectMetadata>
+    <DataFactoryIndexing>
+        <ADRIS_MetaData>
+            <IndexSuccess/>
+            <StartTime/>
+            <EndTime/>
+        </ADRIS_MetaData>
+        <DFMajorCompanies/>
+        <DFMinorCompanies/>
+        <DFNAICS/>
+        <DFWPMIndustries/>
+        <DFFTSEGlobalClassifications/>
+        <DFStockExchangeIndices/>
+        <DFSubjects/>
+        <DFCountries/>
+        <DFRegions/>
+        <DFWebRegions/>
+        <DFWPMRegions/>
+        <DFProvinces/>
+        <DFFTcomDisplayCodes/>
+        <DFFTSections/>
+    </DataFactoryIndexing>
+</ObjectMetadata>

@@ -22,31 +22,31 @@ import static org.junit.Assert.assertThat;
  */
 public class MethodeArticleBuilderTest {
 
-    public static final String EDITED_HEADLINE = "Changed";
+	public static final String EDITED_HEADLINE = "Changed";
 
-    @Test
-    public void builtArticleShouldContainExampleHeadlineByDefault() {
-        assertThat(ReferenceArticles.publishedKitchenSinkArticle().build().getArticleXml(),containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE));
-    }
+	@Test
+	public void builtArticleShouldContainExampleHeadlineByDefault() {
+		assertThat(ReferenceArticles.publishedKitchenSinkArticle().build().getArticleXml(),containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE));
+	}
 
-    @Test
-    public void builtArticleAttributesShouldContainExampleHeadlineByDefault() {
-        assertThat(ReferenceArticles.publishedKitchenSinkArticle().build().getAttributesXml(),containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE));
-    }
+	@Test
+	public void builtArticleAttributesShouldContainExampleHeadlineByDefault() {
+		assertThat(ReferenceArticles.publishedKitchenSinkArticle().build().getAttributesXml(),containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE));
+	}
 
-    @Test
-    public void builtArticleShouldNotContainExampleHeadlineWhenChanged() {
-        String articleXml = ReferenceArticles.publishedKitchenSinkArticle().withHeadline(EDITED_HEADLINE).build().getArticleXml();
-        assertThat(articleXml,not(containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE)));
-        assertThat(articleXml,containsString(EDITED_HEADLINE));
-    }
+	@Test
+	public void builtArticleShouldNotContainExampleHeadlineWhenChanged() {
+		String articleXml = ReferenceArticles.publishedKitchenSinkArticle().withHeadline(EDITED_HEADLINE).build().getArticleXml();
+		assertThat(articleXml,not(containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE)));
+		assertThat(articleXml,containsString(EDITED_HEADLINE));
+	}
 
-    @Test
-    public void builtArticleAttributesShouldNotContainExampleHeadlineWhenChanged() {
-        String attributesXml = ReferenceArticles.publishedKitchenSinkArticle().withHeadline(EDITED_HEADLINE).build().getAttributesXml();
-        assertThat(attributesXml,not(containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE)));
-        assertThat(attributesXml,containsString(EDITED_HEADLINE));
-    }
+	@Test
+	public void builtArticleAttributesShouldNotContainExampleHeadlineWhenChanged() {
+		String attributesXml = ReferenceArticles.publishedKitchenSinkArticle().withHeadline(EDITED_HEADLINE).build().getAttributesXml();
+		assertThat(attributesXml,not(containsString(MethodeArticle.HEADLINE_FROM_TEST_FILE)));
+		assertThat(attributesXml,containsString(EDITED_HEADLINE));
+	}
 
 	@Test
 	public void builtArticleShouldHaveCorrectWorkflowStatus() {
@@ -62,7 +62,9 @@ public class MethodeArticleBuilderTest {
 	@Test
 	public void builtArticleShouldHaveChangedSource() {
 		String newSource = "Reuters";
-		String newSourceXml = String.format("<Source title=\"%s\"><SourceCode>%s</SourceCode><SourceDescriptor>%s</SourceDescriptor>", newSource, newSource, newSource);
+		String newSourceXml = String.format("<Source title=\"%s\">\n" +
+				"                <SourceCode>%s</SourceCode>\n" +
+				"                <SourceDescriptor>%s</SourceDescriptor>", newSource, newSource, newSource);
 
 		String attributesXml = ReferenceArticles.publishedKitchenSinkArticle().withSource(newSource).build().getAttributesXml();
 		assertThat(attributesXml, CoreMatchers.containsString(newSourceXml));
@@ -103,5 +105,4 @@ public class MethodeArticleBuilderTest {
 		String systemAttributesXml = ReferenceArticles.publishedKitchenSinkArticle().withChannel(newChannel).build().getSystemAttributes();
 		assertThat(systemAttributesXml, CoreMatchers.containsString(newSystemAttributesXml));
 	}
-
 }

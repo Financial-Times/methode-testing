@@ -12,7 +12,7 @@
         <lead-headline>
             <headline>
                 <ln>
-                    And sacked chimney-sweep pumps boss full of mayonnaise.
+                    This is the headline of a test article with an inline image
                 </ln>
             </headline>
         </lead-headline>
@@ -20,7 +20,7 @@
     <story>
         <text>
             <body>
-                <p>random text for now</p>
+                <p>Text inside article body</p>
                 <p>
                     <web-inline-picture xtransform="scale(0.116 0.116)" width="236" height="133" align="left" alt=""
                                         channel="FTcom" dtxInsert="Left-aligned landscape"
