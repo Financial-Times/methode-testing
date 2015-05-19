@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.TimeZone;
 
 public class MethodeArticle {
-	
+
 	public static final String HEADLINE_FROM_TEST_FILE = "Lead headline \u00a342m for S&amp;P\u2019s \u201cup 79%\u201d";
 	public static final String MARK_DELETED_TRUE = "<DIFTcomMarkDeleted>True</DIFTcomMarkDeleted>";
 	public static final String MARK_DELETED_FALSE = "<DIFTcomMarkDeleted>False</DIFTcomMarkDeleted>";
@@ -23,9 +23,11 @@ public class MethodeArticle {
 	public static final String NEWSPAPER_CHANNEL = "Financial Times";
 	public static final String METHODE_DATE_FORMAT = "yyyyMMddHHmmss";
 
-	private static final String SOURCE = "<Source title=\"Financial Times\"><SourceCode>FT</SourceCode><SourceDescriptor>Financial Times</SourceDescriptor>";
+	private static final String SOURCE = "<Source title=\"Financial Times\">\n" +
+			"                <SourceCode>FT</SourceCode>\n" +
+			"                <SourceDescriptor>Financial Times</SourceDescriptor>";
 	private static final String SYSTEM_ATTRIBUTES_WEB = "<props><productInfo><name>FTcom</name>\n" +
-			"<issueDate>20131219</issueDate>\n" +
+			"<issueDate>20150519</issueDate>\n" +
 			"</productInfo>\n" +
 			"<workFolder>/FT/Companies</workFolder>\n" +
 			"<templateName>/SysConfig/Templates/FT/Base-Story.xml</templateName>\n" +
@@ -47,7 +49,7 @@ public class MethodeArticle {
 	public String getArticleXml() {
 		return articleXml;
 	}
-	
+
 	public String getAttributesXml() {
 		return attributesXml;
 	}
@@ -62,29 +64,29 @@ public class MethodeArticle {
 
 	public EomFile getEomFile() {
 		return new EomFile("","EOM::CompoundStory",
-                articleXml.getBytes(Charsets.UTF_8),
-                attributesXml, workflowStatus, systemAttributes, "usageTickets");
+				articleXml.getBytes(Charsets.UTF_8),
+				attributesXml, workflowStatus, systemAttributes, "usageTickets");
 	}
-	
+
 	@Override
-    public String toString() {
-        return Objects.toStringHelper(this.getClass())
-                .add("articleXml", articleXml)
-                .add("attributesXml", attributesXml)
+	public String toString() {
+		return Objects.toStringHelper(this.getClass())
+				.add("articleXml", articleXml)
+				.add("attributesXml", attributesXml)
 				.add("workflowStatus", workflowStatus)
 				.add("systemAttributes", systemAttributes)
-                .toString();
-    }
+				.toString();
+	}
 
-    public static Builder builder(String articleXml, String attributesXml, String workflowStatus, String systemAttributes) {
-        Builder builder = new Builder();
-        builder.articleXml = articleXml;
-        builder.attributesXml = attributesXml;
+	public static Builder builder(String articleXml, String attributesXml, String workflowStatus, String systemAttributes) {
+		Builder builder = new Builder();
+		builder.articleXml = articleXml;
+		builder.attributesXml = attributesXml;
 		builder.workflowStatus = workflowStatus;
 		builder.systemAttributes = systemAttributes;
-        return builder;
-    }
-	
+		return builder;
+	}
+
 	public static class Builder {
 
 		private String articleXml;
@@ -96,8 +98,8 @@ public class MethodeArticle {
 		private Builder() { }
 
 		public Builder withHeadline(String expectedPublishedArticleHeadline) {
-	        attributesXml = attributesXml.replace(HEADLINE_FROM_TEST_FILE,expectedPublishedArticleHeadline);
-	        articleXml = articleXml.replace(HEADLINE_FROM_TEST_FILE, expectedPublishedArticleHeadline);
+			attributesXml = attributesXml.replace(HEADLINE_FROM_TEST_FILE,expectedPublishedArticleHeadline);
+			articleXml = articleXml.replace(HEADLINE_FROM_TEST_FILE, expectedPublishedArticleHeadline);
 			return this;
 		}
 
@@ -132,30 +134,27 @@ public class MethodeArticle {
 		}
 
 		public Builder published() {
-            Preconditions.checkArgument(!this.attributesXml.contains(MARK_DELETED_TRUE),"already deleted");
-            return this;
-        }
+			Preconditions.checkArgument(!this.attributesXml.contains(MARK_DELETED_TRUE),"already deleted");
+			return this;
+		}
 
-        public Builder deleted() {
-            attributesXml = attributesXml.replace(MARK_DELETED_FALSE, MARK_DELETED_TRUE);
-            return this;
-        }
-		
+		public Builder deleted() {
+			attributesXml = attributesXml.replace(MARK_DELETED_FALSE, MARK_DELETED_TRUE);
+			return this;
+		}
+
 		public MethodeArticle buildPublishedArticle() {
 			return published().build();
 		}
 
 		public MethodeArticle buildDeletedArticle() {
-            return deleted().build();
+			return deleted().build();
 		}
 
-        public MethodeArticle build() {
-            Xml.assertParseable(articleXml);
-            Xml.assertParseable(attributesXml);
-            return new MethodeArticle(articleXml, attributesXml, workflowStatus, systemAttributes);
-        }
+		public MethodeArticle build() {
+			Xml.assertParseable(articleXml);
+			Xml.assertParseable(attributesXml);
+			return new MethodeArticle(articleXml, attributesXml, workflowStatus, systemAttributes);
+		}
 	}
-	
-
-
 }

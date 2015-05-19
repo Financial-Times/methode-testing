@@ -1,10 +1,11 @@
 <props>
     <productInfo>
         <name>%s</name>
-        <issueDate>20131219</issueDate>
+        <issueDate>20150519</issueDate>
     </productInfo>
     <workFolder>/FT/Companies</workFolder>
     <templateName>%s</templateName>
+    <title/>
     <summary>text text text text text text text text text text text text text text text
         text text text text te...
     </summary>

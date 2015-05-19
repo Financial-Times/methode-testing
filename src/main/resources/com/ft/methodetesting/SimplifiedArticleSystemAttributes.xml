@@ -1,19 +1,27 @@
-<props><productInfo><name>FTcom</name>
-<issueDate>20131018</issueDate>
-</productInfo>
-<workFolder>/FT/WorldNews</workFolder>
-<templateName>/SysConfig/Templates/FT/Base-Story.xml</templateName>
-<summary>Text Formatting
+<props>
+    <productInfo>
+        <name>FTcom</name>
+        <issueDate>20150519</issueDate>
+    </productInfo>
+    <workFolder>/FT/WorldNews</workFolder>
+    <templateName>/SysConfig/Templates/FT/Base-Story.xml</templateName>
+    <title/>
+    <summary>Text Formatting
 
-This is an example of bold text : This text is bold
+        This is an example of bold text : This text is bold
 
-This is an example of italic text : This text is italic
+        This is an example of italic text : This text is italic
 
-Links
+        Links
 
-This is a link for an FT article that has been cut and paste from a browser: http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html.
-This link was added using Right-click, Insert Hyperlink: A story about something financial
+        This is a link for an FT article that has been cut and paste from a browser:
+        http://www.ft.com/cms/s/2/e78a8668-c997-11e1-aae2-002128161462.html.
+        This link was added using Right-click, Insert Hyperlink: A story about something financial
 
-This link was added using drag and drop of an article: A story about something financial that was dragged and dropped
+        This link was added using drag and drop of an article: A story about something financial that was dragged and
+        dropped
 
-This link...</summary><wordCount>2392</wordCount></props>
+        This link...
+    </summary>
+    <wordCount>2392</wordCount>
+</props>
