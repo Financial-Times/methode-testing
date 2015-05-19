@@ -13,7 +13,7 @@
         <lead-headline>
             <headline>
                 <ln>
-                    And sacked chimney-sweep pumps boss full of mayonnaise.
+                    This is the headline of a test article with a main image
                 </ln>
             </headline>
         </lead-headline>
@@ -21,7 +21,7 @@
     <story>
         <text>
             <body>
-                <p>random text for now</p>
+                <p>Text inside article body</p>
             </body>
         </text>
     </story>
