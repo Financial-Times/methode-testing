@@ -1,7 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE doc SYSTEM "/SysConfig/Rules/ftpsi.dtd">
-<doc>
-    <lead>
+<?EM-dtdExt /SysConfig/Rules/ftpsi/ftpsi.dtx?>
+<?EM-templateName /SysConfig/Templates/FT/Base-Story.xml?>
+<?xml-formTemplate /SysConfig/Templates/FT/Base-Story.xpt?>
+<?xml-stylesheet type="text/css" href="/SysConfig/Rules/ftpsi/FT/mainrep.css"?>
+<doc xml:lang="en-uk">
+    <lead id="U27010589398083XG">
+        <lead-headline id="U27010589398084NB">
+            <nid-title>
+                <ln><?EM-dummyText [Insert news in depth title here]?>
+                </ln>
+            </nid-title>
+            <in-depth-nav-title>
+                <ln><?EM-dummyText [Insert in depth nav title here]?>
+                </ln>
+            </in-depth-nav-title>
+            <headline>
+                <ln>
+                    This is the headline of a test article with an inline image and a main image
+                </ln>
+            </headline>
+            <skybox-headline>
+                <ln><?EM-dummyText [Insert skybox headline here]?>
+                </ln>
+            </skybox-headline>
+            <triplet-headline>
+                <ln><?EM-dummyText [Insert triplet headline here]?>
+                </ln>
+            </triplet-headline>
+            <promobox-title>
+                <ln><?EM-dummyText [Insert promobox title here]?>
+                </ln>
+            </promobox-title>
+            <promobox-headline>
+                <ln><?EM-dummyText [Insert promobox headline here]?>
+                </ln>
+            </promobox-headline>
+            <editor-choice-headline>
+                <ln><?EM-dummyText [Insert story package headline here]?>
+                </ln>
+            </editor-choice-headline>
+            <nav-collection-headline>
+                <ln><?EM-dummyText [Insert nav collection headline here]?>
+                </ln>
+            </nav-collection-headline>
+            <in-depth-nav-headline>
+                <ln><?EM-dummyText [Insert in depth nav headline here]?>
+                </ln>
+            </in-depth-nav-headline>
+        </lead-headline>
+        <web-index-headline>
+            <ln>Web index headline of a test article with an inline image and a main image</ln>
+        </web-index-headline>
         <lead-images id="U2701877253086gfF">
             <web-master width="2048" height="1152" id="U2701877253086TGC"
                         fileref="/FT/Graphics/Online/Master_2048x1152/dummy_main.jpg?uuid=%s"/>
@@ -10,16 +60,81 @@
             <web-popup-preview width="167" height="96"/>
             <web-popup/>
         </lead-images>
-        <lead-headline>
-            <headline>
-                <ln>
-                    This is the headline of a test article with an inline image and a main image
+        <interactive-chart><?EM-dummyText [Insert interactive-chart link  here]?>
+        </interactive-chart>
+        <web-subhead>
+            <p><?EM-dummyText [Insert web subhead here - max 65 chars]?>
+            </p>
+        </web-subhead>
+        <web-stand-first>
+            <p><?EM-dummyText [Insert web standfirst here - max 98 chars]?>
+            </p>
+        </web-stand-first>
+        <lead-text id="U2701058939808zzG">
+            <lead-body>
+                <p><?EM-dummyText [Insert lead body text here - min 130 chars, max 150 chars]?>
+                </p>
+            </lead-body>
+            <triplet-lead-body>
+                <p><?EM-dummyText [Insert triplet lead body body here]?>
+                </p>
+            </triplet-lead-body>
+            <columnist-lead-body>
+                <p><?EM-dummyText [Insert columnist lead body body here]?>
+                </p>
+            </columnist-lead-body>
+            <short-body>
+                <p><?EM-dummyText [Insert short body body here]?>
+                </p>
+            </short-body>
+            <skybox-body>
+                <p><?EM-dummyText [Insert skybox body here]?>
+                </p>
+            </skybox-body>
+            <promobox-body>
+                <p><?EM-dummyText [Insert promobox body here]?>
+                </p>
+            </promobox-body>
+            <triplet-short-body>
+                <p><?EM-dummyText [Insert triplet short body here]?>
+                </p>
+            </triplet-short-body>
+            <editor-choice-short-lead-body>
+                <p><?EM-dummyText [Insert editor's choice short lead body here]?>
+                </p>
+            </editor-choice-short-lead-body>
+            <nav-collection-short-lead-body>
+                <p><?EM-dummyText [Insert nav collection short lead body here]?>
+                </p>
+            </nav-collection-short-lead-body>
+        </lead-text>
+        <editor-choice><?EM-dummyText [Insert editor hyperlink here]?>
+        </editor-choice>
+        <tablet>
+            <tablet-images>
+                <tablet-master/>
+            </tablet-images>
+            <tablet-headline>
+                <ln><?EM-dummyText [Insert tablet headline here]?>
                 </ln>
-            </headline>
-        </lead-headline>
+            </tablet-headline>
+            <tablet-summary>
+                <p><?EM-dummyText [Insert tablet summary here]?>
+                </p>
+            </tablet-summary>
+        </tablet>
     </lead>
     <story>
-        <text>
+        <headblock id="U2701058939808rME">
+            <headline>
+                <ln><?EM-dummyText [Headline]?>
+                </ln>
+            </headline>
+        </headblock>
+        <text id="U2701058939808WbD">
+            <byline>By
+                <author-name>Patrick O’Apostrophe-Smythe, Washington D.C.</author-name>
+            </byline>
             <body>
                 <p>Text inside article body</p>
                 <p>
