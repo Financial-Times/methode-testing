@@ -22,7 +22,7 @@ public class ImageArticles {
     private static final Charset UTF_8 = Charset.forName("UTF-8");
     public static final String IMAGE_SET_ONTOLOGY = "http://www.ft.com/ontology/content/ImageSet";
     public static final String DEFAULT_MAIN_IMAGE_SIZE = "Primary size";
-    private static final String simpleArticleXmlTemplate = FileUtil.loadFile("article/simple_article_value.xml");
+    private static final String simpleArticleXmlTemplate = FileUtil.loadFile("com/ft/methodetesting/SimplifiedArticle.xml");
     private static final String articleWithMainImageXmlTemplate = FileUtil.loadFile("article/article_value_with_main_image.xml");
     private static final String articleWithInlineImageXmlTemplate = FileUtil.loadFile("article/article_value_with_inline_image.xml");
     private static final String articleWithMainAndInlineImageXmlTemplate = FileUtil.loadFile("article/article_value_with_main_and_inline_image.xml");
