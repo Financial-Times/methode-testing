@@ -22,6 +22,8 @@ public class MethodeArticle {
 	public static final String WEB_CHANNEL = "FTcom";
 	public static final String NEWSPAPER_CHANNEL = "Financial Times";
 	public static final String METHODE_DATE_FORMAT = "yyyyMMddHHmmss";
+	public static final String COMPOUND_STORY_TYPE = "EOM::CompoundStory";
+	public static final String ARCHIVED_STORY_TYPE = "EOM::Story";
 
 	private static final String SOURCE = "<Source title=\"Financial Times\">\n" +
 			"                <SourceCode>FT</SourceCode>\n" +
@@ -38,14 +40,16 @@ public class MethodeArticle {
 	private String attributesXml;
 	private String workflowStatus;
 	private String systemAttributes;
+	private String articleType;
 
-	public MethodeArticle(String articleXml, String attributesXml, String workflowStatus, String systemAttributes) {
+	private MethodeArticle(String articleXml, String attributesXml, String workflowStatus, String systemAttributes, String articleType) {
 		this.articleXml = articleXml;
 		this.attributesXml = attributesXml;
 		this.workflowStatus = workflowStatus;
 		this.systemAttributes = systemAttributes;
+		this.articleType = articleType;
 	}
-
+	
 	public String getArticleXml() {
 		return articleXml;
 	}
@@ -63,9 +67,13 @@ public class MethodeArticle {
 	}
 
 	public EomFile getEomFile() {
-		return new EomFile("","EOM::CompoundStory",
+		return new EomFile("",articleType,
 				articleXml.getBytes(Charsets.UTF_8),
 				attributesXml, workflowStatus, systemAttributes, "usageTickets", null);
+	}
+	
+	public String getArticleType() {
+		return articleType;
 	}
 
 	@Override
@@ -75,6 +83,7 @@ public class MethodeArticle {
 				.add("attributesXml", attributesXml)
 				.add("workflowStatus", workflowStatus)
 				.add("systemAttributes", systemAttributes)
+				.add("type", articleType)
 				.toString();
 	}
 
@@ -92,6 +101,7 @@ public class MethodeArticle {
 		private String articleXml;
 		private String attributesXml;
 		private String workflowStatus;
+		private String articleType = COMPOUND_STORY_TYPE;
 		private String systemAttributes = SYSTEM_ATTRIBUTES_WEB;
 		private static final String EMBARGO_DATE = "<EmbargoDate/>";
 
@@ -105,6 +115,11 @@ public class MethodeArticle {
 
 		public Builder withWorkflowStatus(String workflowStatus) {
 			this.workflowStatus = workflowStatus;
+			return this;
+		}
+		
+		public Builder withArticleType(String articleType) {
+			this.articleType = articleType;
 			return this;
 		}
 
@@ -154,7 +169,8 @@ public class MethodeArticle {
 		public MethodeArticle build() {
 			Xml.assertParseable(articleXml);
 			Xml.assertParseable(attributesXml);
-			return new MethodeArticle(articleXml, attributesXml, workflowStatus, systemAttributes);
+			return new MethodeArticle(articleXml, attributesXml, workflowStatus, systemAttributes, articleType);
 		}
 	}
+
 }

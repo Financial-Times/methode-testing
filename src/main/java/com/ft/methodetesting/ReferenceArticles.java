@@ -35,6 +35,10 @@ public class ReferenceArticles {
         return expectedTransformedXml;
     }
 
+    public static MethodeArticle.Builder publishedSimpleArticle(String workflowStatus) {
+        return MethodeArticle.builder(simpleArticleXmlTemplate,exampleAttributesXml, workflowStatus, simplifiedArticleWebChannelXml).published();
+    }
+    
     public static MethodeArticle.Builder publishedSimpleArticle() {
         return MethodeArticle.builder(simpleArticleXmlTemplate,exampleAttributesXml, MethodeArticle.WEB_READY, simplifiedArticleWebChannelXml).published();
     }

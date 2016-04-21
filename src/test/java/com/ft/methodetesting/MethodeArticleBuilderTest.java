@@ -58,6 +58,12 @@ public class MethodeArticleBuilderTest {
 		String workflowStatus = ReferenceArticles.publishedKitchenSinkArticle().withWorkflowStatus(MethodeArticle.WEB_REVISE).build().getWorkflowStatus();
 		assertThat(workflowStatus, is(MethodeArticle.WEB_REVISE));
 	}
+	
+	@Test
+	public void builtArticleShouldHaveChangedArticleType() {
+		String articleType = ReferenceArticles.publishedKitchenSinkArticle().withArticleType(MethodeArticle.ARCHIVED_STORY_TYPE).build().getArticleType();
+		assertThat(articleType, is(MethodeArticle.ARCHIVED_STORY_TYPE));
+	}
 
 	@Test
 	public void builtArticleShouldHaveChangedSource() {
