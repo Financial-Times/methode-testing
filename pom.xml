@@ -6,7 +6,7 @@
 
     <groupId>com.github.Financial-Times</groupId>
     <artifactId>methode-testing</artifactId>
-    <version>0.1.32.2</version>
+    <version>0.1.32.3</version>
 
     <repositories>
         <repository>
@@ -49,7 +49,7 @@
         <dependency>
             <groupId>com.github.Financial-Times</groupId>
             <artifactId>methode-api-model</artifactId>
-            <version>0.1.239.1</version>
+            <version>0.1.239.3</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
